@@ -1,0 +1,196 @@
+[
+  {
+    "title": "呼叫少年【學生篇】",
+    "year": 2015,
+    "type": "variety",
+    "role": "張芷渝",
+    "note": "發行單位  教育部",
+    "platforms": [
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/watch?v=P2bwca_mdnw"
+      }
+    ],
+    "id": "0b8014d7"
+  },
+  {
+    "title": "呼叫少年【教師篇】",
+    "year": 2015,
+    "type": "variety",
+    "role": "張芷渝",
+    "note": "發行單位 教育部",
+    "platforms": [
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/watch?v=JlAM5XXphTo"
+      }
+    ],
+    "id": "fbe76de4"
+  },
+  {
+    "title": "果實",
+    "year": 2026,
+    "type": "variety",
+    "role": "張容華",
+    "link_url": "https://zh.wikipedia.org/wiki/%E6%9E%9C%E5%AF%A6_(%E7%9F%AD%E5%8A%87)",
+    "platforms": [
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@RSIPLab"
+      },
+      {
+        "name": "GagaOOLala",
+        "url": "https://www.gagaoolala.com/tc/videos/6798/fruit-2026"
+      }
+    ],
+    "id": "4ccad584"
+  },
+  {
+    "title": "如果我不曾見過太陽",
+    "year": 2025,
+    "type": "drama",
+    "role": "琪琪",
+    "link_url": "https://zh.wikipedia.org/wiki/%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A6%8B%E9%81%8E%E5%A4%AA%E9%99%BD",
+    "platforms": [
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/tw/title/81766274"
+      }
+    ],
+    "id": "6af33a71"
+  },
+  {
+    "title": "師大公園地下社會",
+    "year": 2025,
+    "type": "drama",
+    "role": "夏哲",
+    "link_url": "https://zh.wikipedia.org/wiki/%E5%B8%AB%E5%A4%A7%E5%85%AC%E5%9C%92%E5%9C%B0%E4%B8%8B%E7%A4%BE%E6%9C%83",
+    "platforms": [
+      {
+        "name": "MyVideo",
+        "url": "https://www.myvideo.net.tw/details/1/31467"
+      },
+      {
+        "name": "LINE TV",
+        "url": "https://www.linetv.tw/drama/17922/eps/1"
+      },
+      {
+        "name": "愛奇藝",
+        "url": "https://www.iq.com/album/%E5%B8%AB%E5%A4%A7%E5%85%AC%E5%9C%92%E5%9C%B0%E4%B8%8B%E7%A4%BE%E6%9C%83-2025-12l5myadard?lang=zh_tw"
+      }
+    ],
+    "id": "7093d437"
+  },
+  {
+    "title": "童話故事下集",
+    "year": 2025,
+    "type": "drama",
+    "role": "陳思鹿",
+    "link_url": "https://zh.wikipedia.org/wiki/%E7%AB%A5%E8%A9%B1%E6%95%85%E4%BA%8B%E4%B8%8B%E9%9B%86",
+    "platforms": [
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/tw/title/81781166"
+      }
+    ],
+    "id": "d1605e45"
+  },
+  {
+    "title": "某某",
+    "year": 2024,
+    "type": "drama",
+    "role": "黎佳",
+    "link_url": "https://zh.wikipedia.org/wiki/%E6%9F%90%E6%9F%90_(%E7%94%B5%E8%A7%86%E5%89%A7)",
+    "platforms": [
+      {
+        "name": "GagaOOLala",
+        "url": "https://www.gagaoolala.com/tc/videos/4679/the-on1y-one-2024"
+      }
+    ],
+    "id": "c00886a3"
+  },
+  {
+    "title": "無神之地不下雨",
+    "year": 2021,
+    "type": "drama",
+    "role": "陳愛婷",
+    "link_url": "https://zh.wikipedia.org/wiki/%E7%84%A1%E7%A5%9E%E4%B9%8B%E5%9C%B0%E4%B8%8D%E4%B8%8B%E9%9B%A8",
+    "platforms": [
+      {
+        "name": "愛奇藝",
+        "url": "https://www.iq.com/album/%E7%84%A1%E7%A5%9E%E4%B9%8B%E5%9C%B0%E4%B8%8D%E4%B8%8B%E9%9B%A8-2021-yqjld2fwup?lang=zh_tw"
+      }
+    ],
+    "id": "536263be"
+  },
+  {
+    "title": "天巡者",
+    "year": 2020,
+    "type": "drama",
+    "role": "高嘉琪",
+    "link_url": "https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B7%A1%E8%80%85",
+    "platforms": [
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/tw/title/81346818"
+      }
+    ],
+    "id": "5467502a"
+  },
+  {
+    "title": "黑喵知情",
+    "year": 2020,
+    "type": "drama",
+    "role": "沈蕙芳",
+    "link_url": "https://zh.wikipedia.org/wiki/%E9%BB%91%E5%96%B5%E7%9F%A5%E6%83%85",
+    "platforms": [
+      {
+        "name": "LINE TV",
+        "url": "https://www.linetv.tw/drama/11399/eps/1"
+      }
+    ],
+    "id": "9cd89bac"
+  },
+  {
+    "title": "びしょ濡れ探偵 水野羽衣",
+    "year": 2019,
+    "type": "drama",
+    "role": "ヤン",
+    "link_url": "https://www.tv-tokyo.co.jp/bishonure/cast/profile.html?trgt=s_04",
+    "platforms": [
+      {
+        "name": "Paravi(現已不存)",
+        "url": ""
+      }
+    ],
+    "id": "f2836f55"
+  },
+  {
+    "title": "一千個晚安",
+    "year": 2019,
+    "type": "drama",
+    "role": "戴天雨",
+    "link_url": "https://zh.wikipedia.org/wiki/%E4%B8%80%E5%8D%83%E5%80%8B%E6%99%9A%E5%AE%89",
+    "platforms": [
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/tw/title/80188935"
+      }
+    ],
+    "id": "3ef2da29"
+  },
+  {
+    "title": "訪客",
+    "year": 2020,
+    "type": "film",
+    "role": "韓莉婷",
+    "link_url": "https://zh.wikipedia.org/wiki/%E8%A8%AA%E5%AE%A2_(%E9%9B%BB%E8%A6%96%E9%9B%BB%E5%BD%B1)",
+    "platforms": [
+      {
+        "name": "公視+",
+        "url": "https://www.pts.org.tw/ptsoriginals/ep14.html"
+      }
+    ],
+    "id": "8c703f6a"
+  }
+]

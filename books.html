@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書單 — 宇宙手帖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/shared.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">宇宙手帖</a></div>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="works.html">作品集</a>
+    <a href="books.html" style="color:var(--accent)">書單</a>
+  </nav>
+  <div class="header-right">
+    <button class="toggle-btn" id="themeToggle" aria-label="切換夜間模式"></button>
+    <span class="toggle-icon" id="themeIcon"></span>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1 class="page-hero-title">書單</h1>
+    <div class="page-hero-desc">
+      <p class="page-hero-jp">本を読むことは、誰かの宇宙を少しだけ旅すること。<br><br>このページでは、ピピさんが紹介した本や、インタビュー・Podcast・イベントなどで語られていた本をまとめています。<br><br>いつか同じ本を手に取ったとき、少しだけ同じ景色が見えるかもしれません。</p>
+      <p class="page-hero-zh">閱讀一本書，就像短暫旅行到另一個人的宇宙。<br><br>這裡整理了PP推薦過的書籍，以及她在訪談、Podcast、活動中提到過的作品。<br><br>或許有一天，當我們翻開同一本書時，也能看見相似的風景。</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">全部書目 <span class="count-tag" id="booksCount"></span></h2>
+    <div class="controls">
+      <input class="search-input" id="booksSearch" type="search" placeholder="搜尋書名、作者…" autocomplete="off">
+    </div>
+  </div>
+  <div class="books-grid" id="booksGrid">
+    <div class="empty-state" style="grid-column:1/-1"><div class="emoji">📚</div>載入中…</div>
+  </div>
+</section>
+
+<footer>
+  <p>宇宙手帖 · 姚愛寗非官方記錄站</p>
+  <p style="margin-top:6px;font-size:0.76rem;">内容僅供個人紀錄，版權屬原著作人所有</p>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到頂端">↑</button>
+
+<script src="js/books.js"></script>
+</body>
+</html>

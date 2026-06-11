@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集 — 宇宙手帖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/shared.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">宇宙手帖</a></div>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="works.html" style="color:var(--accent)">作品集</a>
+    <a href="books.html">書單</a>
+  </nav>
+  <div class="header-right">
+    <button class="toggle-btn" id="themeToggle" aria-label="切換夜間模式"></button>
+    <span class="toggle-icon" id="themeIcon"></span>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1 class="page-hero-title">作品集</h1>
+    <div class="page-hero-desc">
+      <p class="page-hero-jp">作品との出会いは、人との出会い。<br><br>映画、ドラマなど、ピピさんが関わった作品を記録しています。<br><br>ここは作品データベースというより、ひとりの観測者による鑑賞記録。<br><br>どの作品から出会ったとしても、きっとそこにはピピさんらしさがあると思います。</p>
+      <p class="page-hero-zh">與作品的相遇，也是與人的相遇。<br><br>這裡記錄著PP參與過的電影、戲劇等作品。<br><br>與其說是資料庫，更像是一位觀測者留下的觀賞紀錄。<br><br>無論從哪部作品認識她，都能看見屬於PP的模樣。</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">全部作品 <span class="count-tag" id="worksCount"></span></h2>
+    <div class="controls">
+      <input class="search-input" id="worksSearch" type="search" placeholder="搜尋作品…" autocomplete="off">
+      <button class="filter-btn works-filter active" data-filter="all">全部</button>
+      <button class="filter-btn works-filter" data-filter="film">電影</button>
+      <button class="filter-btn works-filter" data-filter="drama">電視劇</button>
+      <button class="filter-btn works-filter" data-filter="variety">短劇</button>
+      <button class="filter-btn works-filter" data-filter="other">其他</button>
+    </div>
+  </div>
+  <div class="works-grid" id="worksGrid">
+    <div class="empty-state" style="grid-column:1/-1"><div class="emoji">🎬</div>載入中…</div>
+  </div>
+</section>
+
+<footer>
+  <p>宇宙手帖 · 姚愛寗非官方記錄站</p>
+  <p style="margin-top:6px;font-size:0.76rem;">内容僅供個人紀錄，版權屬原著作人所有</p>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到頂端">↑</button>
+
+<script src="js/works.js"></script>
+</body>
+</html>
