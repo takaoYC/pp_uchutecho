@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星光補充表單 — ピピ宇宙手帖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/shared.js"></script>
+  <style>
+    .contribute-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 52px 24px 64px;
+    }
+    .contribute-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: .08em;
+      margin-bottom: 36px;
+    }
+    .contribute-star {
+      font-size: 18px;
+      letter-spacing: 10px;
+      color: var(--accent-soft);
+      margin-bottom: 16px;
+    }
+    .contribute-text {
+      font-family: 'Noto Serif TC', 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 2;
+      letter-spacing: .04em;
+      margin-bottom: 48px;
+      white-space: pre-line;
+    }
+    .contribute-text strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .form-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .form-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 880px;
+      border: none;
+    }
+    .form-fallback {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .form-fallback a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">ピピ宇宙手帖</a></div>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="works.html">作品集</a>
+    <a href="mv.html">MV</a>
+    <a href="interviews.html">訪談/節目</a>
+    <a href="books.html">書單</a>
+  </nav>
+  <div class="header-right">
+    <button class="toggle-btn" id="themeToggle" aria-label="切換夜間模式"></button>
+    <span class="toggle-icon" id="themeIcon"></span>
+  </div>
+</header>
+
+<div class="contribute-body">
+  <div class="contribute-star">✦ ✧ ✦</div>
+  <h1 class="contribute-title">星光補充表單</h1>
+  <p class="contribute-text">宇宙很大，而一個人的光，也常常散落在不同的角落。
+
+《ピピ宇宙手帖》是我以個人興趣整理的非官方索引網站，記錄著作品、MV、訪談、節目，以及那些曾經被提起的書籍與文字。然而，再認真的考古，也難免會有遺漏的星光。
+
+如果您發現網站中尚未收錄的資料，歡迎透過這份表單與我分享。
+
+無論是一部作品、一支MV、一篇訪談，或是一段被遺忘在時間裡的紀錄，都有機會讓這份星圖變得更加完整。
+
+非常感謝每一位願意提供線索的人。
+
+也謝謝您和我一樣，願意在宇宙的角落裡，一起觀測這顆名為 <strong>PP</strong> 的星星。</p>
+
+  <div class="form-wrap">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdU3WXhGA1Tu5CP31mXndl7UhZJixXRhxCIeEfg1xtCYW0mxg/viewform?embedded=true"
+      title="星光補充表單"
+      loading="lazy">
+      載入中…
+    </iframe>
+    <div class="form-fallback">
+      若表單無法正常顯示，請
+      <a href="https://forms.gle/R1CHWrfmnneXJGSA8" target="_blank" rel="noopener">點此在新視窗開啟</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>ピピ宇宙手帖 · 姚愛寗非官方記錄站</p>
+  <p style="margin-top:6px;font-size:0.76rem;">内容僅供個人紀錄用，版權屬原著作人所有</p>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到頂端">↑</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initBackTop();
+});
+</script>
+</body>
+</html>
