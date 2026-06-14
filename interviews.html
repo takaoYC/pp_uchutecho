@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>訪談/節目 — ピピ宇宙手帖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/shared.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">ピピ宇宙手帖</a></div>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="works.html">作品集</a>
+    <a href="mv.html">MV</a>
+    <a href="interviews.html" style="color:var(--accent)">訪談/節目</a>
+    <a href="books.html">書單</a>
+  </nav>
+  <div class="header-right">
+    <button class="toggle-btn" id="themeToggle" aria-label="切換夜間模式"></button>
+    <span class="toggle-icon" id="themeIcon"></span>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1 class="page-hero-title">訪談/節目</h1>
+    <div class="page-hero-desc">
+      <p class="page-hero-jp">言葉をたどることは、その人の考え方に少しだけ触れること。<br><br>このページでは、インタビューや対談、Podcast、イベントなどで語られていた言葉をまとめています。<br><br>作品の裏側や日々のこと、ふとした価値観が垣間見える瞬間もあります。<br><br>答えを知るためではなく、その人が見ている景色を少しだけ想像するために。</p>
+      <p class="page-hero-zh">追尋一個人的話語，也是在短暫觸碰她的思考方式。<br><br>這裡整理了PP在訪談、對談、Podcast與活動中留下的言語片段。<br><br>有時是作品背後的故事，有時是生活中的細微感受，也有那些不經意流露的價值觀。<br><br>並非為了尋找答案，而是試著想像她所看見的風景。</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">訪談/節目</h2>
+    <input class="search-input" id="interviewSearch" type="search" placeholder="搜尋標題、來源…" autocomplete="off">
+  </div>
+
+  <div class="sub-section">
+    <div class="sub-section-title">文字 <span class="count-tag" id="textCount"></span></div>
+    <div class="interview-text-grid" id="interviewTextGrid">
+      <div class="empty-state" style="grid-column:1/-1"><div class="emoji">📰</div>載入中…</div>
+    </div>
+  </div>
+
+  <div class="sub-section">
+    <div class="sub-section-title">影音 <span class="count-tag" id="videoCount"></span></div>
+    <div class="yt-grid" id="interviewVideoGrid">
+      <div class="empty-state" style="grid-column:1/-1"><div class="emoji">🎥</div>載入中…</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>ピピ宇宙手帖 · 姚愛寗非官方記錄站</p>
+  <p style="margin-top:6px;font-size:0.76rem;">内容僅供個人紀錄用，版權屬原著作人所有</p>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到頂端">↑</button>
+
+<script src="js/interviews.js"></script>
+</body>
+</html>

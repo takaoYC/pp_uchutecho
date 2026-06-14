@@ -59,6 +59,43 @@ function bookCard(b) {
     </div>`;
 }
 
+/* ── YouTube helpers ── */
+function youtubeId(input) {
+  if (!input) return '';
+  const m = input.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : input.trim();
+}
+
+function youtubeCard(item) {
+  const vid = youtubeId(item.youtube_url || '');
+  if (!vid) return '';
+  const thumb = `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+  const link  = `https://www.youtube.com/watch?v=${vid}`;
+  return `
+    <div class="yt-card">
+      <a href="${link}" target="_blank" rel="noopener" class="yt-thumb-wrap">
+        <img src="${thumb}" alt="${item.title}" class="yt-thumb" loading="lazy">
+        <div class="yt-play-btn"></div>
+      </a>
+      <div class="yt-info">
+        <div class="yt-title">${item.title}</div>
+        ${item.artist ? `<div class="yt-sub">${item.artist}</div>` : ''}
+        ${item.source ? `<div class="yt-sub">${item.source}</div>` : ''}
+        ${item.date   ? `<div class="yt-date">${item.date}</div>` : ''}
+      </div>
+    </div>`;
+}
+
+function interviewTextCard(item) {
+  return `
+    <a href="${item.url}" target="_blank" rel="noopener" class="interview-text-card">
+      <div class="itc-date">${item.date}</div>
+      <div class="itc-title">${item.title}</div>
+      ${item.source ? `<div class="itc-source">${item.source}</div>` : ''}
+      <span class="itc-arrow">閱讀全文 →</span>
+    </a>`;
+}
+
 /* ── Theme toggle ── */
 function initTheme() {
   const btn = document.getElementById('themeToggle');

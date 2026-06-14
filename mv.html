@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>書單 — ピピ宇宙手帖</title>
+  <title>MV — ピピ宇宙手帖</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -16,9 +16,9 @@
   <nav>
     <a href="index.html">首頁</a>
     <a href="works.html">作品集</a>
-    <a href="mv.html">MV</a>
+    <a href="mv.html" style="color:var(--accent)">MV</a>
     <a href="interviews.html">訪談/節目</a>
-    <a href="books.html" style="color:var(--accent)">書單</a>
+    <a href="books.html">書單</a>
   </nav>
   <div class="header-right">
     <button class="toggle-btn" id="themeToggle" aria-label="切換夜間模式"></button>
@@ -28,23 +28,21 @@
 
 <div class="page-hero">
   <div class="page-hero-inner">
-    <h1 class="page-hero-title">書單</h1>
+    <h1 class="page-hero-title">MV</h1>
     <div class="page-hero-desc">
-      <p class="page-hero-jp">本を読むことは、誰かの宇宙を少しだけ旅すること。<br><br>このページでは、ピピさんが紹介した本や、インタビュー・Podcast・イベントなどで語られていた本をまとめています。<br><br>いつか同じ本を手に取ったとき、少しだけ同じ景色が見えるかもしれません。</p>
-      <p class="page-hero-zh">閱讀一本書，就像短暫旅行到另一個人的宇宙。<br><br>這裡整理了PP推薦過的書籍，以及她在訪談、Podcast、活動中提到過的作品。<br><br>或許有一天，當我們翻開同一本書時，也能看見相似的風景。</p>
+      <p class="page-hero-jp">音楽は、ときどき言葉よりも遠くまで届くもの。<br><br>このページでは、ピピさんが出演したMVや音楽映像をまとめています。<br><br>数分という短い時間の中にも、そのときだけの表情や物語が映し出されています。<br><br>歌を聴きながら眺めていると、作品とはまた違う光が見えてくるかもしれません。</p>
+      <p class="page-hero-zh">音樂有時比言語更能抵達遙遠的地方。<br><br>這裡整理了PP出演過的MV與音樂影像作品。<br><br>即使只有短短幾分鐘，也映照著某個時刻獨有的表情與故事。<br><br>當旋律響起時，或許能看見與戲劇作品不同的另一道光芒。</p>
     </div>
   </div>
 </div>
 
 <section class="section">
   <div class="section-header">
-    <h2 class="section-title">全部書目 <span class="count-tag" id="booksCount"></span></h2>
-    <div class="controls">
-      <input class="search-input" id="booksSearch" type="search" placeholder="搜尋書名、作者…" autocomplete="off">
-    </div>
+    <h2 class="section-title">MV <span class="count-tag" id="mvCount"></span></h2>
+    <input class="search-input" id="mvSearch" type="search" placeholder="搜尋 MV…" autocomplete="off">
   </div>
-  <div class="books-grid" id="booksGrid">
-    <div class="empty-state" style="grid-column:1/-1"><div class="emoji">📚</div>載入中…</div>
+  <div class="yt-grid" id="mvGrid">
+    <div class="empty-state" style="grid-column:1/-1"><div class="emoji">🎵</div>載入中…</div>
   </div>
 </section>
 
@@ -55,6 +53,6 @@
 
 <button class="back-top" id="backTop" aria-label="回到頂端">↑</button>
 
-<script src="js/books.js"></script>
+<script src="js/mv.js"></script>
 </body>
 </html>
