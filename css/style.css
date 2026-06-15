@@ -344,6 +344,25 @@ nav a:hover { color: var(--accent); text-decoration: none; }
 .book-author { font-size: 0.85rem; color: var(--text-muted); }
 .book-author span { color: var(--text); }
 .book-isbn { font-size: 0.78rem; color: var(--text-muted); font-family: monospace; }
+.book-foreword-badge,
+.book-blurb-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: .03em;
+}
+.book-foreword-badge {
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  color: #fff;
+}
+.book-blurb-badge {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+}
 .book-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
 .book-link {
   font-size: 0.78rem;

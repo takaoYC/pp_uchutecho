@@ -51,9 +51,18 @@ function bookCard(b) {
     b.buy_url && `<a href="${b.buy_url}" target="_blank" rel="noopener" class="book-link">🛒 購買</a>`,
     b.library_url && `<a href="${b.library_url}" target="_blank" rel="noopener" class="book-link">📖 圖書館</a>`
   ].filter(Boolean).join('');
+  const endorsement = b.endorsement || (b.has_foreword ? 'foreword' : '');
+  const forewordBadge = endorsement === 'foreword'
+    ? `<span class="book-foreword-badge" title="姚愛寗撰寫推薦序，收錄於書中">✦ 推薦序</span>`
+    : endorsement === 'blurb'
+    ? `<span class="book-blurb-badge" title="姚愛寗為此書撰寫推薦語">✧ 推薦語</span>`
+    : '';
   return `
     <div class="book-card">
-      <div class="book-header"><div class="book-title">${b.title}</div></div>
+      <div class="book-header">
+        <div class="book-title">${b.title}</div>
+        ${forewordBadge}
+      </div>
       ${author}${isbn}
       ${links ? `<div class="book-links">${links}</div>` : ''}
     </div>`;
