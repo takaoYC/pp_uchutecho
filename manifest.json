@@ -2,7 +2,7 @@
   "name": "ピピ宇宙手帖",
   "short_name": "ピピ手帖",
   "description": "姚愛寗 PP 粉絲記錄站",
-  "start_url": "./",
+  "start_url": "/pp_uchutecho/",
   "display": "browser",
   "background_color": "#f3effb",
   "theme_color": "#9b72cf",
