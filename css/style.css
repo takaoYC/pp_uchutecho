@@ -364,6 +364,16 @@ nav a:hover { color: var(--accent); text-decoration: none; }
   color: var(--accent);
 }
 .book-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.books-note {
+  max-width: 860px;
+  margin: 32px auto 0;
+  padding: 0 24px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  border-left: 2px solid var(--accent);
+  padding-left: 14px;
+}
 .book-link {
   font-size: 0.78rem;
   padding: 4px 12px;
