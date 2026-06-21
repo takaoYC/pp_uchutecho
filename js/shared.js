@@ -87,7 +87,10 @@ function youtubeCard(item) {
         <div class="yt-play-btn"></div>
       </a>
       <div class="yt-info">
-        <div class="yt-title">${item.title}</div>
+        <div class="yt-title-row">
+          <div class="yt-title">${item.title}</div>
+          ${item.directed ? `<span class="yt-directed-badge">🎬 執導</span>` : ''}
+        </div>
         ${item.artist ? `<div class="yt-sub">${item.artist}</div>` : ''}
         ${item.source ? `<div class="yt-sub">${item.source}</div>` : ''}
         ${item.date   ? `<div class="yt-date">${item.date}</div>` : ''}

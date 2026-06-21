@@ -601,7 +601,19 @@ footer {
 .yt-card:hover .yt-play-btn { background: rgba(0,0,0,0.38); }
 .yt-card:hover .yt-play-btn::after { transform: scale(1.18); }
 .yt-info { padding: 14px 16px 16px; }
-.yt-title { font-weight: 700; font-size: 0.95rem; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
+.yt-title-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 4px; }
+.yt-title { font-weight: 700; font-size: 0.95rem; color: var(--text); line-height: 1.4; flex: 1; }
+.yt-directed-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #72aacf, #a0d4f5);
+  color: #fff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
 .yt-sub   { font-size: 0.82rem; color: var(--accent); margin-bottom: 2px; }
 .yt-date  { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
 
