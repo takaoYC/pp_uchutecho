@@ -394,5 +394,19 @@
       }
     ],
     "id": "6709d94d"
+  },
+  {
+    "title": "花椒之味",
+    "year": 2019,
+    "type": "film",
+    "role": "如枝的粉絲(客串)",
+    "link_url": "https://zh.wikipedia.org/zh-tw/%E8%8A%B1%E6%A4%92%E4%B9%8B%E5%91%B3",
+    "platforms": [
+      {
+        "name": "Apple TV+",
+        "url": "https://tv.apple.com/tw/movie/%E8%8A%B1%E6%A4%92%E4%B9%8B%E5%91%B3/umc.cmc.5t17nr4qf65znhtzrxkmwidb0"
+      }
+    ],
+    "id": "8e571b48"
   }
 ]
