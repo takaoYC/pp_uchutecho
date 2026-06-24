@@ -437,6 +437,32 @@ footer {
   margin-top: 20px;
 }
 
+/* ── Social links ── */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 14px 0 4px;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.footer-social a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.footer-social svg { width: 17px; height: 17px; fill: currentColor; }
+
 /* ── Live visitor count ── */
 .live-count {
   font-size: 0.8rem;
