@@ -134,16 +134,17 @@ async function initLiveCount() {
   if (!el) return;
   const fetch_count = async () => {
     try {
-      const now = new Date();
-      const ago = new Date(now - 24 * 60 * 60 * 1000);
-      const fmt = d => d.toISOString().slice(0, 10);
-      const res = await fetch(
-        `${GC_API}/stats/hits?start=${fmt(ago)}&end=${fmt(now)}`,
-        { headers: { 'Authorization': `Bearer ${GC_TOKEN}` } }
-      );
+      const res = await fetch(`${GC_API}/stats/hits`, {
+        headers: { 'Authorization': `Bearer ${GC_TOKEN}` }
+      });
       if (!res.ok) return;
       const data = await res.json();
-      const total = data.total_unique ?? data.total ?? (data.hits || []).reduce((s, h) => s + (h.count_unique || 0), 0);
+      const now = new Date();
+      const today = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+      const total = (data.hits || []).reduce((s, h) => {
+        const dayStat = (h.stats || []).find(st => st.day === today);
+        return s + (dayStat ? (dayStat.daily || 0) : 0);
+      }, 0);
       if (total < 1) { el.hidden = true; return; }
       el.hidden = false;
       el.textContent = `✦ 今日有 ${total} 位旅人翻閱手帖 ✦`;
