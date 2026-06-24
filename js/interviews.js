@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initBackTop();
+  initLastUpdated();
+  initLiveCount();
   loadInterviews();
 });
 

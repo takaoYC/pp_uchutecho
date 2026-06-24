@@ -125,6 +125,43 @@ function initTheme() {
   });
 }
 
+/* ── GoatCounter live visitor count ── */
+const GC_API   = 'https://pp-uchutecho.goatcounter.com/api/v0';
+const GC_TOKEN = 'i40wzgr4shn14mbnpmpqz6d36kqfj3z3hjhd22g6lfluiv856';
+
+async function initLiveCount() {
+  const el = document.getElementById('liveCount');
+  if (!el) return;
+  const fetch_count = async () => {
+    try {
+      const now = new Date();
+      const ago = new Date(now - 24 * 60 * 60 * 1000);
+      const fmt = d => d.toISOString().slice(0, 10);
+      const res = await fetch(
+        `${GC_API}/stats/hits?start=${fmt(ago)}&end=${fmt(now)}`,
+        { headers: { 'Authorization': `Bearer ${GC_TOKEN}` } }
+      );
+      if (!res.ok) return;
+      const data = await res.json();
+      const total = data.total_unique ?? data.total ?? (data.hits || []).reduce((s, h) => s + (h.count_unique || 0), 0);
+      if (total < 1) { el.hidden = true; return; }
+      el.hidden = false;
+      el.textContent = `✦ 今日有 ${total} 位旅人翻閱手帖 ✦`;
+    } catch (e) { el.hidden = true; }
+  };
+  fetch_count();
+  setInterval(fetch_count, 60_000);
+}
+
+/* ── Last updated ── */
+function initLastUpdated() {
+  const el = document.getElementById('lastUpdated');
+  if (!el) return;
+  const d = new Date(document.lastModified);
+  const s = `${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;
+  el.textContent = `最後更新 ${s}`;
+}
+
 /* ── Back to top ── */
 function initBackTop() {
   const btn = document.getElementById('backTop');

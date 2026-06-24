@@ -437,6 +437,15 @@ footer {
   margin-top: 20px;
 }
 
+/* ── Live visitor count ── */
+.live-count {
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
 /* ── Count tag ── */
 .count-tag {
   font-size: 0.78rem;
