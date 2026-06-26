@@ -161,5 +161,13 @@
     "artist": "蔡雅雯",
     "directed": false,
     "id": "002cd6f9"
+  },
+  {
+    "title": "1974",
+    "date": "2020-06-02",
+    "youtube_url": "https://www.youtube.com/watch?v=9TI7ogIQA5E",
+    "artist": "柏霖",
+    "directed": true,
+    "id": "7f87106d"
   }
 ]
