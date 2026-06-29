@@ -169,5 +169,13 @@
     "artist": "柏霖",
     "directed": true,
     "id": "7f87106d"
+  },
+  {
+    "title": "李宗霖《雨Rain》一千個晚安 插曲",
+    "date": "2019-06-12",
+    "youtube_url": "https://www.youtube.com/watch?v=J36zfIeaq14",
+    "artist": "李宗霖",
+    "directed": false,
+    "id": "d9e4d805"
   }
 ]
