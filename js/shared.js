@@ -155,12 +155,18 @@ async function initLiveCount() {
 }
 
 /* ── Last updated ── */
-function initLastUpdated() {
+async function initLastUpdated() {
   const el = document.getElementById('lastUpdated');
   if (!el) return;
   const d = new Date(document.lastModified);
   const s = `${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;
-  el.textContent = `最後更新 ${s}`;
+  try {
+    const res = await fetch('./data/changelog.json?t=' + Date.now());
+    const data = await res.json();
+    el.textContent = data.note ? `最後更新 ${s}｜${data.note}` : `最後更新 ${s}`;
+  } catch {
+    el.textContent = `最後更新 ${s}`;
+  }
 }
 
 /* ── Back to top ── */
