@@ -125,33 +125,19 @@ function initTheme() {
   });
 }
 
-/* ── GoatCounter live visitor count ── */
-const GC_API   = 'https://pp-uchutecho.goatcounter.com/api/v0';
-const GC_TOKEN = 'i40wzgr4shn14mbnpmpqz6d36kqfj3z3hjhd22g6lfluiv856';
-
+/* ── GoatCounter cumulative visitor count (no token needed) ── */
 async function initLiveCount() {
   const el = document.getElementById('liveCount');
   if (!el) return;
-  const fetch_count = async () => {
-    try {
-      const res = await fetch(`${GC_API}/stats/hits`, {
-        headers: { 'Authorization': `Bearer ${GC_TOKEN}` }
-      });
-      if (!res.ok) return;
-      const data = await res.json();
-      const now = new Date();
-      const today = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
-      const total = (data.hits || []).reduce((s, h) => {
-        const dayStat = (h.stats || []).find(st => st.day === today);
-        return s + (dayStat ? (dayStat.daily || 0) : 0);
-      }, 0);
-      if (total < 1) { el.hidden = true; return; }
-      el.hidden = false;
-      el.textContent = `✦ 今日有 ${total} 位旅人翻閱手帖 ✦`;
-    } catch (e) { el.hidden = true; }
-  };
-  fetch_count();
-  setInterval(fetch_count, 60_000);
+  try {
+    const res = await fetch('https://pp-uchutecho.goatcounter.com/counter//pp_uchutecho/index.html.json');
+    if (!res.ok) return;
+    const data = await res.json();
+    const total = parseInt(data.count_unique || data.count || '0', 10);
+    if (total < 1) { el.hidden = true; return; }
+    el.hidden = false;
+    el.textContent = `✦ 累計已有 ${total} 位旅人翻閱手帖 ✦`;
+  } catch (e) { el.hidden = true; }
 }
 
 /* ── Last updated ── */
