@@ -72,11 +72,37 @@ function bookCard(b) {
 function youtubeId(input) {
   if (!input) return '';
   const m = input.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
-  return m ? m[1] : input.trim();
+  return m ? m[1] : '';
+}
+
+function isFacebookUrl(url) {
+  return /facebook\.com|fb\.com|fb\.watch/.test(url || '');
+}
+
+function facebookVideoCard(item) {
+  const url = item.youtube_url || item.video_url || '';
+  return `
+    <div class="yt-card">
+      <a href="${url}" target="_blank" rel="noopener" class="yt-thumb-wrap fb-thumb-wrap">
+        <div class="fb-thumb-inner">
+          <svg viewBox="0 0 24 24" style="width:40px;height:40px;fill:#fff;opacity:0.9"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span style="color:#fff;font-size:0.8rem;margin-top:8px;opacity:0.85">前往觀看</span>
+        </div>
+      </a>
+      <div class="yt-info">
+        <div class="yt-title-row">
+          <div class="yt-title">${item.title}</div>
+        </div>
+        ${item.source ? `<div class="yt-sub">${item.source}</div>` : ''}
+        ${item.date   ? `<div class="yt-date">${item.date}</div>` : ''}
+      </div>
+    </div>`;
 }
 
 function youtubeCard(item) {
-  const vid = youtubeId(item.youtube_url || '');
+  const url = item.youtube_url || item.video_url || '';
+  if (isFacebookUrl(url)) return facebookVideoCard(item);
+  const vid = youtubeId(url);
   if (!vid) return '';
   const thumb = `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
   const link  = `https://www.youtube.com/watch?v=${vid}`;
