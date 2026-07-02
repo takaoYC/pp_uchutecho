@@ -14,9 +14,11 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+
 <header>
   <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">ピピ宇宙手帖</a></div>
-  <nav>
+  <nav aria-label="主選單">
     <a href="index.html">首頁</a>
     <a href="works.html">作品集</a>
     <a href="mv.html">MV</a>
@@ -29,6 +31,8 @@
   </div>
 </header>
 
+<main id="main-content">
+
 <div class="page-hero">
   <div class="page-hero-inner">
     <h1 class="page-hero-title">訪談/節目</h1>
@@ -39,26 +43,28 @@
   </div>
 </div>
 
-<section class="section">
+<section class="section" aria-labelledby="interviews-heading">
   <div class="section-header">
-    <h2 class="section-title">訪談/節目</h2>
-    <input class="search-input" id="interviewSearch" type="search" placeholder="搜尋標題、來源…" autocomplete="off">
+    <h2 class="section-title" id="interviews-heading">訪談/節目</h2>
+    <input class="search-input" id="interviewSearch" aria-label="搜尋訪談/節目" type="search" placeholder="搜尋標題、來源…" autocomplete="off">
   </div>
 
   <div class="sub-section">
-    <div class="sub-section-title">文字 <span class="count-tag" id="textCount"></span></div>
+    <h3 class="sub-section-title">文字 <span class="count-tag" id="textCount"></span></h3>
     <div class="interview-text-grid" id="interviewTextGrid">
       <div class="empty-state" style="grid-column:1/-1"><div class="emoji">📰</div>載入中…</div>
     </div>
   </div>
 
   <div class="sub-section">
-    <div class="sub-section-title">影音 <span class="count-tag" id="videoCount"></span></div>
+    <h3 class="sub-section-title">影音 <span class="count-tag" id="videoCount"></span></h3>
     <div class="yt-grid" id="interviewVideoGrid">
       <div class="empty-state" style="grid-column:1/-1"><div class="emoji">🎥</div>載入中…</div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <p>這本手帖只是其中一片星空。</p>

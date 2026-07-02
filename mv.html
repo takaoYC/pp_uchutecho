@@ -14,9 +14,11 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+
 <header>
   <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">ピピ宇宙手帖</a></div>
-  <nav>
+  <nav aria-label="主選單">
     <a href="index.html">首頁</a>
     <a href="works.html">作品集</a>
     <a href="mv.html" style="color:var(--accent)">MV</a>
@@ -29,6 +31,8 @@
   </div>
 </header>
 
+<main id="main-content">
+
 <div class="page-hero">
   <div class="page-hero-inner">
     <h1 class="page-hero-title">MV</h1>
@@ -39,15 +43,17 @@
   </div>
 </div>
 
-<section class="section">
+<section class="section" aria-labelledby="mv-heading">
   <div class="section-header">
-    <h2 class="section-title">MV <span class="count-tag" id="mvCount"></span></h2>
-    <input class="search-input" id="mvSearch" type="search" placeholder="搜尋 MV…" autocomplete="off">
+    <h2 class="section-title" id="mv-heading">MV <span class="count-tag" id="mvCount"></span></h2>
+    <input class="search-input" id="mvSearch" aria-label="搜尋 MV" type="search" placeholder="搜尋 MV…" autocomplete="off">
   </div>
   <div class="yt-grid" id="mvGrid">
     <div class="empty-state" style="grid-column:1/-1"><div class="emoji">🎵</div>載入中…</div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <p>這本手帖只是其中一片星空。</p>

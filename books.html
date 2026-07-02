@@ -14,9 +14,11 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+
 <header>
   <div class="site-title"><a href="index.html" style="-webkit-text-fill-color:transparent;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;background-clip:text;">ピピ宇宙手帖</a></div>
-  <nav>
+  <nav aria-label="主選單">
     <a href="index.html">首頁</a>
     <a href="works.html">作品集</a>
     <a href="mv.html">MV</a>
@@ -29,6 +31,8 @@
   </div>
 </header>
 
+<main id="main-content">
+
 <div class="page-hero">
   <div class="page-hero-inner">
     <h1 class="page-hero-title">書單</h1>
@@ -39,11 +43,11 @@
   </div>
 </div>
 
-<section class="section">
+<section class="section" aria-labelledby="books-heading">
   <div class="section-header">
-    <h2 class="section-title">全部書目 <span class="count-tag" id="booksCount"></span></h2>
+    <h2 class="section-title" id="books-heading">全部書目 <span class="count-tag" id="booksCount"></span></h2>
     <div class="controls">
-      <input class="search-input" id="booksSearch" type="search" placeholder="搜尋書名、作者…" autocomplete="off">
+      <input class="search-input" id="booksSearch" aria-label="搜尋書單" type="search" placeholder="搜尋書名、作者…" autocomplete="off">
     </div>
   </div>
   <div class="books-grid" id="booksGrid">
@@ -54,6 +58,8 @@
 <div class="books-note">
   <p>標示「推薦序」者，指書中或商品頁明確收錄姚愛寗撰寫之序文、專序或具篇名之推薦文；標示「推薦語」者，則多為短句推薦、名人推薦名單或推薦段落，未必為單獨成篇文章。</p>
 </div>
+
+</main>
 
 <footer>
   <p>這本手帖只是其中一片星空。</p>

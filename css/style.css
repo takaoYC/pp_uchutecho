@@ -78,6 +78,13 @@ nav a {
   font-weight: 500;
 }
 nav a:hover { color: var(--accent); text-decoration: none; }
+nav a:focus-visible {
+  color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+  text-decoration: none;
+}
 .header-right { display: flex; align-items: center; gap: 14px; }
 
 /* Dark mode toggle */
@@ -185,6 +192,24 @@ nav a:hover { color: var(--accent); text-decoration: none; }
   flex-wrap: wrap;
   align-items: center;
 }
+
+/* ── Skip link (visually hidden, shown on keyboard focus) ── */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 8px; outline: 2px solid #fff; outline-offset: 2px; }
+
 .search-input {
   padding: 8px 14px;
   border: 1.5px solid var(--border);
@@ -192,11 +217,11 @@ nav a:hover { color: var(--accent); text-decoration: none; }
   background: var(--bg-card-solid);
   color: var(--text);
   font-size: 0.88rem;
-  outline: none;
+  outline: none; /* replaced by border-color on focus below */
   transition: border-color var(--transition);
   min-width: 180px;
 }
-.search-input:focus { border-color: var(--accent); }
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(155,114,207,0.2); }
 .filter-btn {
   padding: 7px 14px;
   border: 1.5px solid var(--border);
@@ -692,11 +717,11 @@ footer {
 
 /* ── Interview page sub-sections ── */
 .sub-section { margin-bottom: 52px; }
-.sub-section-title {
+.sub-section-title, h3.sub-section-title {
   font-size: 1.1rem; font-weight: 700; color: var(--text);
   margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
 }
-.sub-section-title::before {
+.sub-section-title::before, h3.sub-section-title::before {
   content: ''; display: block; width: 4px; height: 1.1em;
   background: linear-gradient(to bottom, var(--grad-start), var(--grad-end));
   border-radius: 4px; flex-shrink: 0;
