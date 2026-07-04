@@ -185,5 +185,21 @@
     "artist": "愛繆",
     "directed": false,
     "id": "e1cb0d35"
+  },
+  {
+    "title": "有一種悲傷 (《比悲傷更悲傷的故事》主題曲)",
+    "date": "2018-10-12",
+    "youtube_url": "https://www.youtube.com/watch?v=BRcudpJzy1I",
+    "artist": "A-Lin",
+    "directed": false,
+    "id": "f24eb619"
+  },
+  {
+    "title": "Once The Night Comes (《共犯》插曲)",
+    "date": "2014-09-23",
+    "youtube_url": "https://www.youtube.com/watch?v=52c_WItgwJ0",
+    "artist": "家家",
+    "directed": false,
+    "id": "4c90da6f"
   }
 ]
