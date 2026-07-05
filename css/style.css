@@ -837,7 +837,23 @@ footer {
   .header-right { order: 2; }
 }
 
-/* ── Event expand/collapse ── */
+/* ── Event list card (preview) ── */
+.event-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card-link:hover { text-decoration: none; }
+.event-card-link:hover .event-card {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(155,114,207,0.2);
+}
+.event-card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
 .event-preview {
   font-size: 0.95rem;
   color: var(--text-muted);
@@ -848,14 +864,63 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.event-full-content { display: none; }
-.event-card.expanded .event-preview { display: none; }
-.event-card.expanded .event-full-content { display: flex; flex-direction: column; gap: 8px; }
 .event-read-more {
-  background: none; border: none; cursor: pointer;
   color: var(--accent); font-size: 0.88rem; font-weight: 600;
-  padding: 0; font-family: inherit;
   display: flex; align-items: center; gap: 4px;
   margin-top: 4px;
 }
-.event-read-more:hover { text-decoration: underline; }
+
+/* ── Event detail page ── */
+/* Thumbnail on list card */
+.event-thumb {
+  margin: -28px -32px 20px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  max-height: 220px;
+}
+.event-thumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: block;
+}
+@media (max-width: 600px) {
+  .event-thumb { margin: -20px -20px 16px; }
+  .event-thumb img { height: 160px; }
+}
+
+.event-detail-back {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--accent); font-size: 0.9rem; font-weight: 600;
+  margin-bottom: 28px;
+  padding: 6px 14px;
+  border: 1px solid rgba(155,114,207,0.3);
+  border-radius: 20px;
+  background: rgba(155,114,207,0.06);
+  transition: background 0.2s;
+}
+.event-detail-back:hover { background: rgba(155,114,207,0.14); text-decoration: none; }
+.event-detail-header {
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.event-detail-header .event-meta { margin-bottom: 0; }
+.event-detail-header .event-title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.event-detail-content { display: flex; flex-direction: column; gap: 16px; }
+
+/* Force dark mode to override inline color styles from Word paste */
+[data-theme="dark"] .event-body * {
+  color: inherit !important;
+}
+[data-theme="dark"] .event-body {
+  color: var(--text);
+}
