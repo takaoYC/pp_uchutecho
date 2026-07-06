@@ -209,5 +209,61 @@
     "artist": "CREATE-ACTiONS",
     "directed": false,
     "id": "b1060a04"
+  },
+  {
+    "title": "二十九、三十",
+    "date": "2018-12-04",
+    "youtube_url": "https://www.youtube.com/watch?v=lnPWahPq7wc",
+    "artist": "銀杏BOYZ",
+    "directed": false,
+    "id": "7b75b5fc"
+  },
+  {
+    "title": "恋は永遠",
+    "date": "2017-09-20",
+    "youtube_url": "https://www.youtube.com/watch?v=xm6cm49PSW4",
+    "artist": "銀杏BOYZ",
+    "directed": false,
+    "id": "be4f9aaf"
+  },
+  {
+    "title": "夏季悲歌 (2分鐘試聽版)",
+    "date": "2016-08-24",
+    "youtube_url": "https://www.youtube.com/watch?v=iro1o-dxrjc",
+    "artist": "四枝筆",
+    "directed": false,
+    "id": "27b8daa9"
+  },
+  {
+    "title": "夏季悲歌 Summer Tragedy",
+    "date": "2021-06-11",
+    "youtube_url": "https://www.youtube.com/watch?v=wVGbP9039pg",
+    "artist": "四枝筆",
+    "directed": false,
+    "id": "791d2c96"
+  },
+  {
+    "title": "我不能不能喜歡你 (《童話故事下集》插曲)",
+    "date": "2025-02-24",
+    "youtube_url": "https://www.youtube.com/watch?v=3wubbqLN1TQ",
+    "artist": "琳誼",
+    "directed": false,
+    "id": "4e96e8ed"
+  },
+  {
+    "title": "果實 (《果實》主題曲)",
+    "date": "2026-04-19",
+    "youtube_url": "https://www.youtube.com/watch?v=NuTS6hO3QZo",
+    "artist": "孔晨羽",
+    "directed": false,
+    "id": "a9d8a94b"
+  },
+  {
+    "title": "What Is The Reason (《果實》主題曲)",
+    "date": "2026-04-19",
+    "youtube_url": "https://www.youtube.com/watch?v=qqcZf-ZrhAs",
+    "artist": "EQ Zhu",
+    "directed": false,
+    "id": "7ac763ec"
   }
 ]
