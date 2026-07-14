@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const events = await res.json();
     const ev = events.find(e => e.id === id);
 
-    if (!ev) {
-      showError(container, '找不到這篇紀錄，可能已被移除。');
+    if (!ev || ev.published === false) {
+      showError(container, '找不到這篇紀錄，可能已被移除或暫時下架。');
       return;
     }
 

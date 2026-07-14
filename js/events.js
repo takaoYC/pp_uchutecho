@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    const sorted = [...events].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    const visible = events.filter(e => e.published !== false);
+    const sorted = [...visible].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    if (!sorted.length) {
+      container.innerHTML = `<div class="empty-state"><div class="emoji">📷</div>活動紀錄整理中，敬請期待。</div>`;
+      return;
+    }
     container.innerHTML = `<div class="event-list">${sorted.map(eventCard).join('')}</div>`;
   } catch (e) {
     container.innerHTML = `<div class="empty-state"><div class="emoji">⚠️</div>載入失敗，請稍後再試。</div>`;
