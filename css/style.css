@@ -777,10 +777,14 @@ footer {
 
 .event-body {
   font-size: 0.95rem;
+  font-family: 'Noto Serif TC', 'Noto Serif JP', serif;
   color: var(--text);
   line-height: 2;
   letter-spacing: 0.03em;
   margin: 0;
+}
+.event-body * {
+  font-family: 'Noto Serif TC', 'Noto Serif JP', serif !important;
 }
 
 .event-figure {
@@ -927,6 +931,46 @@ footer {
   background: rgba(22, 17, 42, 0.72);
 }
 .event-detail-content { display: flex; flex-direction: column; gap: 16px; }
+
+/* ── Event detail links ── */
+.event-links {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.event-links-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+.event-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.event-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: 1px solid rgba(155,114,207,0.35);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(155,114,207,0.06);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  width: fit-content;
+}
+.event-link-btn::before { content: '↗'; font-size: 0.8rem; flex-shrink: 0; }
+.event-link-btn:hover {
+  background: rgba(155,114,207,0.15);
+  border-color: var(--accent);
+  text-decoration: none;
+}
 
 /* Force dark mode to override inline color styles from Word paste */
 [data-theme="dark"] .event-body * {
