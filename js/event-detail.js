@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const dateStr = ev.date ? ev.date.replace(/-/g, '.') : '';
     const venue = ev.venue ? `<span class="event-venue">✦ ${escHtml(ev.venue)}</span>` : '';
 
+    const linksHtml = renderLinks(ev.links || []);
     container.innerHTML = `
-      <a class="event-detail-back" href="events.html">← 返回活動紀錄</a>
+      <a class="event-detail-back" href="events.html">← 返回紀錄</a>
       <article>
         <header class="event-detail-header">
           <div class="event-meta">
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="event-detail-content">
           ${renderContent(ev.content || [])}
         </div>
+        ${linksHtml}
       </article>
     `;
   } catch (e) {
@@ -51,8 +53,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function showError(container, msg) {
   container.innerHTML = `
-    <a class="event-detail-back" href="events.html">← 返回活動紀錄</a>
+    <a class="event-detail-back" href="events.html">← 返回紀錄</a>
     <div class="empty-state"><div class="emoji">⚠️</div>${msg}</div>`;
+}
+
+function renderLinks(links) {
+  if (!links || !links.length) return '';
+  return `
+    <div class="event-links">
+      <div class="event-links-title">延伸連結</div>
+      <div class="event-links-list">
+        ${links.map(l => `
+          <a href="${escHtml(l.url)}" target="_blank" rel="noopener" class="event-link-btn">
+            ${escHtml(l.label || l.url)}
+          </a>`).join('')}
+      </div>
+    </div>`;
 }
 
 function renderContent(blocks) {
