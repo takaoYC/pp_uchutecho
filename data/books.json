@@ -598,5 +598,27 @@
     "endorsement": "",
     "order": 58,
     "id": "192e3cac"
+  },
+  {
+    "title": "公主向前走",
+    "author": "瑪希亞．葛芮",
+    "translator": "葉彥君",
+    "isbn": "9789861754703",
+    "buy_url": "https://www.eslite.com/product/1001112702617491?srsltid=AfmBOoqGxzGTO2NxcF4Q2U3H8d0dMSXjLMNG4B1IBqNkNdgBBVSSRnyc",
+    "library_url": "https://nbinet3.ncl.edu.tw/search~S10*cht/?searchtype=i&searcharg=9789861754703&searchscope=10&sortdropdown=-&SORT=D&extended=1&SUBMIT=%E6%9F%A5%E8%A9%A2&searchlimits=&searchorigarg=i9789860621716",
+    "endorsement": "",
+    "order": 59,
+    "id": "81269d79"
+  },
+  {
+    "title": "臣服實驗",
+    "author": "麥克．辛格",
+    "translator": "劉嘉路",
+    "isbn": "9789861754468",
+    "buy_url": "https://www.eslite.com/product/1001112702565016?attr=wgHwwQoMCJTpldMGEJKWucoDEAEaJDZhODE5MWU2LTAwMDAtMmIwMi1iYWQ4LWY0ZjVlODBiM2RmMCpAMDVlMzFmYTY4ODIxMmQ3MzQ5ODU1ZmM5YjliOGI0ZWExNTJjZTkwOWEzZGExODhlZDJlNTIyMGFlYjlmMjUzMDIsx5bwMJzWty2Ovp0V1LKdFcLwnhWQ97Iwn9a3Lajlqi3JlvAw7M-dOIjfqTg6DmRlZmF1bHRfc2VhcmNoSAFYAWABaAF6AnRw",
+    "library_url": "https://nbinet3.ncl.edu.tw/search~S10*cht/?searchtype=i&searcharg=9789861754468&searchscope=10&sortdropdown=-&SORT=D&extended=1&SUBMIT=%E6%9F%A5%E8%A9%A2&searchlimits=&searchorigarg=i9789861754703",
+    "endorsement": "",
+    "order": 60,
+    "id": "8679ca2b"
   }
 ]
