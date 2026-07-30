@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const dateStr = ev.date ? ev.date.replace(/-/g, '.') : '';
     const venue = ev.venue ? `<span class="event-venue">✦ ${escHtml(ev.venue)}</span>` : '';
 
+    const relatedHtml = renderRelated(ev.related || [], events);
     const linksHtml = renderLinks(ev.links || []);
     container.innerHTML = `
       <a class="event-detail-back" href="events.html">← 返回紀錄</a>
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="event-detail-content">
           ${renderContent(ev.content || [])}
         </div>
+        ${relatedHtml}
         ${linksHtml}
       </article>
     `;
@@ -55,6 +57,25 @@ function showError(container, msg) {
   container.innerHTML = `
     <a class="event-detail-back" href="events.html">← 返回紀錄</a>
     <div class="empty-state"><div class="emoji">⚠️</div>${msg}</div>`;
+}
+
+function renderRelated(related, allEvents) {
+  if (!related.length) return '';
+  const cards = related
+    .map(r => allEvents.find(e => e.id === r.id))
+    .filter(e => e && e.published !== false);
+  if (!cards.length) return '';
+  return `
+    <div class="event-related">
+      <div class="event-related-title">系列文章</div>
+      <div class="event-related-list">
+        ${cards.map(e => `
+          <a href="event.html?id=${escHtml(e.id)}" class="event-related-card">
+            ${e.date ? `<div class="event-related-card-date">${e.date.replace(/-/g, '.')}</div>` : ''}
+            <div class="event-related-card-title">${escHtml(e.title || '')}</div>
+          </a>`).join('')}
+      </div>
+    </div>`;
 }
 
 function renderLinks(links) {
@@ -71,10 +92,15 @@ function renderLinks(links) {
     </div>`;
 }
 
+function stripEmptyParas(html) {
+  // Remove <p> elements that only contain whitespace, <br>, or <span><br></span> (Google Docs empty lines)
+  return html.replace(/<p[^>]*>(?:\s|<br\s*\/?>|<span[^>]*>\s*<br\s*\/?>\s*<\/span>| )*<\/p>/gi, '');
+}
+
 function renderContent(blocks) {
   return blocks.map(block => {
     if (block.type === 'text') {
-      return `<div class="event-body">${block.value || ''}</div>`;
+      return `<div class="event-body">${stripEmptyParas(block.value || '')}</div>`;
     }
     if (block.type === 'image') {
       return `
