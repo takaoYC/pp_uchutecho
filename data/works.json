@@ -317,6 +317,14 @@
       {
         "name": "Google Play",
         "url": "https://play.google.com/store/movies/details?id=MUr3puJfE6E"
+      },
+      {
+        "name": "Apple TV+",
+        "url": "https://tv.apple.com/tw/movie/%E6%90%96%E6%BB%BE%E6%A8%82%E6%AE%BA%E4%BA%BA%E4%BA%8B%E4%BB%B6/umc.cmc.1g6s4yy42oihf3s0agkjl8zd"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/watch?v=MUr3puJfE6E"
       }
     ],
     "id": "8f8b41c3"
