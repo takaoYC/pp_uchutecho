@@ -1,31 +1,17 @@
 [
   {
-    "title": "呼叫少年【學生篇】",
-    "year": 2015,
-    "type": "variety",
-    "role": "張芷渝",
-    "note": "發行單位  教育部",
+    "title": "歡迎來到朵莉之家",
+    "year": 2026,
+    "type": "film",
+    "role": "瑪莉亞公主",
+    "link_url": "",
     "platforms": [
       {
-        "name": "YouTube",
-        "url": "https://www.youtube.com/watch?v=P2bwca_mdnw"
+        "name": "10/30台灣上映",
+        "url": ""
       }
     ],
-    "id": "0b8014d7"
-  },
-  {
-    "title": "呼叫少年【教師篇】",
-    "year": 2015,
-    "type": "variety",
-    "role": "張芷渝",
-    "note": "發行單位 教育部",
-    "platforms": [
-      {
-        "name": "YouTube",
-        "url": "https://www.youtube.com/watch?v=JlAM5XXphTo"
-      }
-    ],
-    "id": "fbe76de4"
+    "id": "ca1f3931"
   },
   {
     "title": "果實",
@@ -110,6 +96,32 @@
     "id": "c00886a3"
   },
   {
+    "title": "不能流淚的悲傷",
+    "year": 2023,
+    "type": "film",
+    "role": "謝淑卿",
+    "link_url": "",
+    "platforms": [
+      {
+        "name": "MyVideo",
+        "url": "https://www.myvideo.net.tw/details/0/374524?gad_source=1&gad_campaignid=22921663908&gbraid=0AAAAACOitVvTxMpmQca71H4H6tklrW4pU&gclid=CjwKCAjwuanRBhBSEiwAY5y6V4vgYTsS4Ek-DBpJeBz92ASnUKcTAbNBM4imGEY8cjc97e0sQPgzxxoCt84QAvD_BwE"
+      },
+      {
+        "name": "Apple TV+",
+        "url": "https://tv.apple.com/tw/movie/%E4%B8%8D%E8%83%BD%E6%B5%81%E6%B7%9A%E7%9A%84%E6%82%B2%E5%82%B7/umc.cmc.60qmbaf3w74eeej49w615jcfl"
+      },
+      {
+        "name": "愛奇藝",
+        "url": "https://www.iq.com/play/%E4%B8%8D%E8%83%BD%E6%B5%81%E6%B7%9A%E7%9A%84%E6%82%B2%E5%82%B7-2024-1xvgool81wo?lang=zh_tw"
+      },
+      {
+        "name": "Disney+",
+        "url": "https://www.disneyplus.com/identity/login/enter-email"
+      }
+    ],
+    "id": "2635c0c4"
+  },
+  {
     "title": "無神之地不下雨",
     "year": 2021,
     "type": "drama",
@@ -122,6 +134,32 @@
       }
     ],
     "id": "536263be"
+  },
+  {
+    "title": "青春弒戀",
+    "year": 2021,
+    "type": "film",
+    "role": "綺綺",
+    "link_url": "https://zh.wikipedia.org/wiki/%E9%9D%92%E6%98%A5%E5%BC%92%E6%88%80",
+    "platforms": [
+      {
+        "name": "Disney+",
+        "url": "https://www.disneyplus.com/zh-tw/browse/entity-018d25ab-5064-4020-8382-0d3ee6162abe"
+      },
+      {
+        "name": "MyVideo",
+        "url": "https://www.myvideo.net.tw/details/0/344729"
+      },
+      {
+        "name": "Apple TV+",
+        "url": "https://tv.apple.com/tw/movie/%E9%9D%92%E6%98%A5%E5%BC%92%E6%88%80/umc.cmc.5tnfejd9ff9qrufokj9qw3tii"
+      },
+      {
+        "name": "Hami Video",
+        "url": "https://hamivideo.hinet.net/hamivideo/product/176703.do?cs=2"
+      }
+    ],
+    "id": "5e8f9a47"
   },
   {
     "title": "天巡者",
@@ -152,6 +190,34 @@
     "id": "9cd89bac"
   },
   {
+    "title": "訪客",
+    "year": 2020,
+    "type": "film",
+    "role": "韓莉婷",
+    "link_url": "https://zh.wikipedia.org/wiki/%E8%A8%AA%E5%AE%A2_(%E9%9B%BB%E8%A6%96%E9%9B%BB%E5%BD%B1)",
+    "platforms": [
+      {
+        "name": "公視+",
+        "url": "https://www.pts.org.tw/ptsoriginals/ep14.html"
+      }
+    ],
+    "id": "8c703f6a"
+  },
+  {
+    "title": "戀愛好好說",
+    "year": 2020,
+    "type": "film",
+    "role": "杜小蘭",
+    "link_url": "",
+    "platforms": [
+      {
+        "name": "Catchplay+",
+        "url": "https://www.catchplay.com/tw/video/38e122a6-21bb-4766-9919-81b007eda58a"
+      }
+    ],
+    "id": "baba4e23"
+  },
+  {
     "title": "びしょ濡れ探偵 水野羽衣",
     "year": 2019,
     "type": "drama",
@@ -178,104 +244,6 @@
       }
     ],
     "id": "3ef2da29"
-  },
-  {
-    "title": "訪客",
-    "year": 2020,
-    "type": "film",
-    "role": "韓莉婷",
-    "link_url": "https://zh.wikipedia.org/wiki/%E8%A8%AA%E5%AE%A2_(%E9%9B%BB%E8%A6%96%E9%9B%BB%E5%BD%B1)",
-    "platforms": [
-      {
-        "name": "公視+",
-        "url": "https://www.pts.org.tw/ptsoriginals/ep14.html"
-      }
-    ],
-    "id": "8c703f6a"
-  },
-  {
-    "title": "海吉拉",
-    "year": 2018,
-    "type": "film",
-    "role": "劉宛婷/劉廷",
-    "link_url": "https://zh.wikipedia.org/wiki/%E6%B5%B7%E5%90%89%E6%8B%89_(%E9%9B%BB%E8%A6%96%E9%9B%BB%E5%BD%B1)",
-    "platforms": [
-      {
-        "name": "LINE TV",
-        "url": "https://www.linetv.tw/drama/13103/eps/1"
-      },
-      {
-        "name": "YouTube",
-        "url": "https://www.youtube.com/watch?v=wZmEoxJL9hc"
-      }
-    ],
-    "id": "e9d82ff5"
-  },
-  {
-    "title": "不能流淚的悲傷",
-    "year": 2023,
-    "type": "film",
-    "role": "謝淑卿",
-    "link_url": "",
-    "platforms": [
-      {
-        "name": "MyVideo",
-        "url": "https://www.myvideo.net.tw/details/0/374524?gad_source=1&gad_campaignid=22921663908&gbraid=0AAAAACOitVvTxMpmQca71H4H6tklrW4pU&gclid=CjwKCAjwuanRBhBSEiwAY5y6V4vgYTsS4Ek-DBpJeBz92ASnUKcTAbNBM4imGEY8cjc97e0sQPgzxxoCt84QAvD_BwE"
-      },
-      {
-        "name": "Apple TV+",
-        "url": "https://tv.apple.com/tw/movie/%E4%B8%8D%E8%83%BD%E6%B5%81%E6%B7%9A%E7%9A%84%E6%82%B2%E5%82%B7/umc.cmc.60qmbaf3w74eeej49w615jcfl"
-      },
-      {
-        "name": "愛奇藝",
-        "url": "https://www.iq.com/play/%E4%B8%8D%E8%83%BD%E6%B5%81%E6%B7%9A%E7%9A%84%E6%82%B2%E5%82%B7-2024-1xvgool81wo?lang=zh_tw"
-      },
-      {
-        "name": "Disney+",
-        "url": "https://www.disneyplus.com/identity/login/enter-email"
-      }
-    ],
-    "id": "2635c0c4"
-  },
-  {
-    "title": "青春弒戀",
-    "year": 2021,
-    "type": "film",
-    "role": "綺綺",
-    "link_url": "https://zh.wikipedia.org/wiki/%E9%9D%92%E6%98%A5%E5%BC%92%E6%88%80",
-    "platforms": [
-      {
-        "name": "Disney+",
-        "url": "https://www.disneyplus.com/zh-tw/browse/entity-018d25ab-5064-4020-8382-0d3ee6162abe"
-      },
-      {
-        "name": "MyVideo",
-        "url": "https://www.myvideo.net.tw/details/0/344729"
-      },
-      {
-        "name": "Apple TV+",
-        "url": "https://tv.apple.com/tw/movie/%E9%9D%92%E6%98%A5%E5%BC%92%E6%88%80/umc.cmc.5tnfejd9ff9qrufokj9qw3tii"
-      },
-      {
-        "name": "Hami Video",
-        "url": "https://hamivideo.hinet.net/hamivideo/product/176703.do?cs=2"
-      }
-    ],
-    "id": "5e8f9a47"
-  },
-  {
-    "title": "戀愛好好說",
-    "year": 2020,
-    "type": "film",
-    "role": "杜小蘭",
-    "link_url": "",
-    "platforms": [
-      {
-        "name": "Catchplay+",
-        "url": "https://www.catchplay.com/tw/video/38e122a6-21bb-4766-9919-81b007eda58a"
-      }
-    ],
-    "id": "baba4e23"
   },
   {
     "title": "為你存在的每一天",
@@ -306,6 +274,38 @@
       }
     ],
     "id": "643f3885"
+  },
+  {
+    "title": "花椒之味",
+    "year": 2019,
+    "type": "film",
+    "role": "如枝的粉絲(客串)",
+    "link_url": "https://zh.wikipedia.org/zh-tw/%E8%8A%B1%E6%A4%92%E4%B9%8B%E5%91%B3",
+    "platforms": [
+      {
+        "name": "Apple TV+",
+        "url": "https://tv.apple.com/tw/movie/%E8%8A%B1%E6%A4%92%E4%B9%8B%E5%91%B3/umc.cmc.5t17nr4qf65znhtzrxkmwidb0"
+      }
+    ],
+    "id": "8e571b48"
+  },
+  {
+    "title": "海吉拉",
+    "year": 2018,
+    "type": "film",
+    "role": "劉宛婷/劉廷",
+    "link_url": "https://zh.wikipedia.org/wiki/%E6%B5%B7%E5%90%89%E6%8B%89_(%E9%9B%BB%E8%A6%96%E9%9B%BB%E5%BD%B1)",
+    "platforms": [
+      {
+        "name": "LINE TV",
+        "url": "https://www.linetv.tw/drama/13103/eps/1"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/watch?v=wZmEoxJL9hc"
+      }
+    ],
+    "id": "e9d82ff5"
   },
   {
     "title": "搖滾樂殺人事件",
@@ -386,6 +386,34 @@
     "id": "9826a625"
   },
   {
+    "title": "呼叫少年【學生篇】",
+    "year": 2015,
+    "type": "variety",
+    "role": "張芷渝",
+    "note": "發行單位  教育部",
+    "platforms": [
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/watch?v=P2bwca_mdnw"
+      }
+    ],
+    "id": "0b8014d7"
+  },
+  {
+    "title": "呼叫少年【教師篇】",
+    "year": 2015,
+    "type": "variety",
+    "role": "張芷渝",
+    "note": "發行單位 教育部",
+    "platforms": [
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/watch?v=JlAM5XXphTo"
+      }
+    ],
+    "id": "fbe76de4"
+  },
+  {
     "title": "共犯",
     "year": 2014,
     "type": "film",
@@ -402,19 +430,5 @@
       }
     ],
     "id": "6709d94d"
-  },
-  {
-    "title": "花椒之味",
-    "year": 2019,
-    "type": "film",
-    "role": "如枝的粉絲(客串)",
-    "link_url": "https://zh.wikipedia.org/zh-tw/%E8%8A%B1%E6%A4%92%E4%B9%8B%E5%91%B3",
-    "platforms": [
-      {
-        "name": "Apple TV+",
-        "url": "https://tv.apple.com/tw/movie/%E8%8A%B1%E6%A4%92%E4%B9%8B%E5%91%B3/umc.cmc.5t17nr4qf65znhtzrxkmwidb0"
-      }
-    ],
-    "id": "8e571b48"
   }
 ]
