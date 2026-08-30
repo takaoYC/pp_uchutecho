@@ -87,6 +87,20 @@ nav a:focus-visible {
 }
 .header-right { display: flex; align-items: center; gap: 14px; }
 
+.anniv-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.72rem; font-family: 'Noto Sans TC', sans-serif; font-weight: 700;
+  letter-spacing: 0.06em; white-space: nowrap;
+  padding: 4px 10px; border-radius: 20px;
+  background: linear-gradient(120deg, #1a1040 0%, #2a1a5e 60%, #1a1040 100%);
+  color: #c8b8f0; border: 1px solid rgba(180,150,255,0.35);
+  text-decoration: none;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 8px rgba(140,100,240,0.2);
+}
+.anniv-badge:hover { opacity: 0.85; box-shadow: 0 0 14px rgba(140,100,240,0.4); }
+@media (max-width: 520px) { .anniv-badge { font-size: 0.68rem; padding: 3px 8px; } }
+
 /* Dark mode toggle */
 .toggle-btn {
   background: var(--accent-soft);
