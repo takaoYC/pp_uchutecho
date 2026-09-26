@@ -601,13 +601,12 @@ footer {
     padding-right: 20px;
     padding-bottom: 20px;
   }
-  .page-hero-zh { padding-left: 20px; padding-top: 20px; }
+  .page-hero-zh { padding: 20px 4px 8px; }
+  .hero { padding-left: 16px; padding-right: 16px; }
 }
 
 /* Home intro: paragraph gap ≈ half a line instead of a full <br><br> */
-.home-intro p { margin: 0 0 0.9em; }/* Avoid a lone character on the last line */
-.page-hero-zh, .page-hero-zh p, .about-bio p { text-wrap: pretty; }
-.home-intro p:last-child { margin-bottom: 0; }
+.home-intro p { margin: 0 0 0.9em; }.home-intro p:last-child { margin-bottom: 0; }
 
 /* ── About (home) ── */
 .about-grid {
