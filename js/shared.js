@@ -156,13 +156,15 @@ async function initLiveCount() {
   const el = document.getElementById('liveCount');
   if (!el) return;
   try {
-    const res = await fetch('https://pp-uchutecho.goatcounter.com/counter//pp_uchutecho/index.html.json');
+    // Site-wide pageviews across all pages
+    const res = await fetch('https://pp-uchutecho.goatcounter.com/counter/TOTAL.json');
     if (!res.ok) return;
     const data = await res.json();
-    const total = parseInt(data.count_unique || data.count || '0', 10);
-    if (total < 1) { el.hidden = true; return; }
+    // GoatCounter formats numbers with spaces as thousands separators ("3 210")
+    const total = parseInt(String(data.count || '0').replace(/\D/g, ''), 10);
+    if (!total) { el.hidden = true; return; }
     el.hidden = false;
-    el.textContent = `✦ 累計已有 ${total} 位旅人翻閱手帖 ✦`;
+    el.textContent = `✦ 手帖已被翻閱 ${total.toLocaleString('en-US')} 次 ✦`;
   } catch (e) { el.hidden = true; }
 }
 
