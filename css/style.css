@@ -641,6 +641,8 @@ footer {
 .about-bio p { margin: 0 0 1.1em; }
 .about-bio p:last-child { margin-bottom: 0; }
 .about-lead { font-weight: 700; font-size: 1.05rem; }
+.about-name { font-size: 1.35rem; letter-spacing: 0.08em; }
+.nw { white-space: nowrap; }
 @media (max-width: 760px) {
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
   .about-embed { max-width: 400px; width: 100%; margin: 0 auto; }
