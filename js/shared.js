@@ -156,8 +156,12 @@ async function initLiveCount() {
   const el = document.getElementById('liveCount');
   if (!el) return;
   try {
-    // Site-wide pageviews across all pages
-    const res = await fetch('https://pp-uchutecho.goatcounter.com/counter/TOTAL.json');
+    // Site-wide pageviews across all pages.
+    // GoatCounter caches each counter URL for hours; a start date that changes every hour
+    // gives a fresh URL (any date before the site launched returns the same full total).
+    const hour = Math.floor(Date.now() / 3600000);
+    const start = new Date(Date.UTC(2000, 0, 1) + (hour % 8000) * 86400000).toISOString().slice(0, 10);
+    const res = await fetch(`https://pp-uchutecho.goatcounter.com/counter/TOTAL.json?start=${start}`);
     if (!res.ok) return;
     const data = await res.json();
     // GoatCounter formats numbers with spaces as thousands separators ("3 210")
