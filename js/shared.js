@@ -188,3 +188,27 @@ function initBackTop() {
   window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 300));
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
+
+/* ── Keep the last few characters of each paragraph together (no lone char on last line) ── */
+function preventOrphans(selector, n = 4) {
+  document.querySelectorAll(selector).forEach(el => {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const targets = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const next = node.nextSibling;
+      // text that ends a line: followed by <br> or last in its block
+      if (node.data.trim() && (!next || next.nodeName === 'BR')) targets.push(node);
+    }
+    targets.forEach(node => {
+      const text = node.data.replace(/\s+$/, '');
+      if (text.length <= n * 2) return;
+      const tail = document.createElement('span');
+      tail.style.whiteSpace = 'nowrap';
+      tail.textContent = text.slice(-n);
+      node.data = text.slice(0, -n);
+      node.after(tail);
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', () => preventOrphans('.page-hero-zh, .about-bio p'));

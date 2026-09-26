@@ -564,7 +564,7 @@ footer {
 }
 .page-hero-desc {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0;
   text-align: left;
   margin-top: 28px;
@@ -589,7 +589,6 @@ footer {
 .page-hero-zh {
   font-family: 'Noto Serif TC', 'Noto Serif JP', Georgia, serif;
   font-weight: 400;
-  padding-left: 28px;
 }
 @media (max-width: 600px) {
   .page-hero-desc {
@@ -603,6 +602,49 @@ footer {
     padding-bottom: 20px;
   }
   .page-hero-zh { padding-left: 20px; padding-top: 20px; }
+}
+
+/* Home intro: paragraph gap ≈ half a line instead of a full <br><br> */
+.home-intro p { margin: 0 0 0.9em; }/* Avoid a lone character on the last line */
+.page-hero-zh, .page-hero-zh p, .about-bio p { text-wrap: pretty; }
+.home-intro p:last-child { margin-bottom: 0; }
+
+/* ── About (home) ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.about-embed { margin: 0; }
+.about-embed iframe {
+  display: block;
+  width: 100%;
+  height: 410px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.about-embed figcaption {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+.about-embed figcaption a { color: var(--accent); text-decoration: none; }
+.about-bio {
+  font-family: 'Noto Sans TC', 'Noto Sans JP', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: var(--text);
+}
+.about-bio p { margin: 0 0 1.1em; }
+.about-bio p:last-child { margin-bottom: 0; }
+.about-lead { font-weight: 700; font-size: 1.05rem; }
+@media (max-width: 760px) {
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .about-embed { max-width: 400px; width: 100%; margin: 0 auto; }
 }
 
 /* ── Divider ── */
