@@ -1015,7 +1015,7 @@
     "content": [
       {
         "type": "image",
-        "url": "images/events/c63e06d2-0856-43ed-a71d-49b8f87bd66e.png",
+        "url": "images/events/c63e06d2-0856-43ed-a71d-49b8f87bd66e.jpg",
         "alt": "截圖自民視新聞網直播"
       },
       {
@@ -1053,6 +1053,10 @@
       {
         "type": "text",
         "value": "<p class=\"MsoNormal\">由游智皓、傅睿邨與劉育樹共同執導的《歡迎來到朵莉之家》，融合真人轉描與細膩手繪動畫語彙，透過角色之間的陪伴與關係，展開一段結合懸疑與情感的故事，電影將於<span lang=\"EN-US\">10</span>月<span lang=\"EN-US\">30</span>日全台正式上映，歡迎大家一起來到這趟陪伴的旅程。<span lang=\"EN-US\"><o:p></o:p></span></p>"
+      },
+      {
+        "type": "text",
+        "value": "<p class=\"MsoNormal\">（本文依公開直播及相關公開資訊整理，作為活動紀錄使用，非官方新聞稿；現場發言經文字整理，內容以當事人及主辦單位公開資訊為準。）<span lang=\"EN-US\"><o:p></o:p></span></p>"
       }
     ],
     "related": [],
