@@ -3,7 +3,18 @@
     "title": "《歡迎來到朵莉之家》上映相關報導",
     "date": "2026-08-30",
     "cover_image": "",
-    "videos": [],
+    "videos": [
+      {
+        "source": "民視新聞網",
+        "title": "0929 台灣首部真人轉描全2D手繪動畫長片！ 姚愛寗、紀培慧、邱以太主演配音拍攝分享",
+        "url": "https://www.youtube.com/watch?v=Ksch42crojw&t=3395s"
+      },
+      {
+        "title": " 昆凌睽違五年登國片 姚愛寗分享伴娃「鬼故事」",
+        "source": "看新聞",
+        "url": "https://www.youtube.com/watch?v=uU8R9S2WkPU"
+      }
+    ],
     "print": [
       {
         "source": "中央社",
@@ -70,6 +81,72 @@
         "thumb": "https://storage.ctinews.com/compression/files/default/cut-1787914946-TiEeBsn.jpg",
         "title": "姚愛寗美夢成真「直接變動漫角色」　攜手邱以太化身二次元情侶",
         "url": "https://ctinews.com/news/items/m0x7NmZyav"
+      },
+      {
+        "source": "三立新聞網",
+        "thumb": "https://s.yimg.com/lo/mysterio/api/496ce215787d133aaff81a129ac16a34c77e345e2ee4177d1c1353d6dd21b126/lightyear_networkapi/resizefill_w960%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fko%2Fsetn.com.tw%2F2b9510523d809848d0e7f7dafa65c9b2.jpg",
+        "title": "金馬入圍／昆凌客串動畫片獲肯定！她感動發聲：很開心能被看見",
+        "url": "https://tw.news.yahoo.com/%E9%87%91%E9%A6%AC%E5%85%A5%E5%9C%8D-%E6%98%86%E5%87%8C%E5%AE%A2%E4%B8%B2%E5%8B%95%E7%95%AB%E7%89%87%E7%8D%B2%E8%82%AF%E5%AE%9A-%E5%A5%B9%E6%84%9F%E5%8B%95%E7%99%BC%E8%81%B2-%E5%BE%88%E9%96%8B%E5%BF%83%E8%83%BD%E8%A2%AB%E7%9C%8B%E8%A6%8B-123000431.html"
+      },
+      {
+        "source": "鏡週刊",
+        "thumb": "https://v3-statics.mirrormedia.mg/images/df07bfa6-4496-42bf-8053-742d4c672eab-w2400.webP",
+        "title": "台式奇幻動畫1／動畫表現詭奇異境　《歡迎來到朵莉之家》多元文化混搭",
+        "url": "https://www.mirrormedia.mg/story/20260924insight002"
+      },
+      {
+        "source": "鏡週刊",
+        "thumb": "https://v3-statics.mirrormedia.mg/images/08f792da-34fa-45d6-908f-bde7e703eef6-w2400.webP",
+        "title": "台式奇幻動畫2／真人轉描2D手繪動畫開新局　節省時間成本塑造美感",
+        "url": "https://www.mirrormedia.mg/story/20260924insight003"
+      },
+      {
+        "source": "鏡週刊",
+        "thumb": "https://v3-statics.mirrormedia.mg/images/89cb2406-b3f7-4a4a-bd80-7ec7c55b0223-w1600.webP",
+        "title": "台式奇幻動畫3／兩大混血美女高顏值添話題　表決認證邱以太當渣男",
+        "url": "https://www.mirrormedia.mg/story/20260924insight004"
+      },
+      {
+        "source": "鏡週刊",
+        "thumb": "https://v3-statics.mirrormedia.mg/images/3722e354-0f09-4600-995f-a967fe85450c-w2400.webP",
+        "title": "台式奇幻動畫4／演員拍戲前臉上畫線做記號　表演不求100分原因曝光",
+        "url": "https://www.mirrormedia.mg/story/20260924insight005"
+      },
+      {
+        "source": "鏡週刊",
+        "thumb": "https://v3-statics.mirrormedia.mg/images/c93c7c7c-f3d6-457f-b449-a5d9fc740be6-w2400.webP",
+        "title": "台式奇幻動畫5／配音三階段高規格詮釋　商業藝術並重國際影展接連登場",
+        "url": "https://www.mirrormedia.mg/story/20260924insight006"
+      },
+      {
+        "source": "東森娛樂",
+        "thumb": "https://img-star.ebc.net.tw/ebcstar/news/2026/09/29/1790705232_75387.jpg?w=1",
+        "title": "昆凌暌違5年回歸大銀幕！搭「最帥星二代」床戲畫面曝光",
+        "url": "https://ent.ebc.net.tw/movie/502783"
+      },
+      {
+        "title": "【車勢星聞】昆凌睽違五年重返大銀幕！奇幻動畫《歡迎來到朵莉之家》10月30日上映",
+        "source": "車勢文化",
+        "url": "https://www.carture.com.tw/others/article/42417-%E3%80%90%E8%BB%8A%E5%8B%A2%E6%98%9F%E8%81%9E%E3%80%91%E6%98%86%E5%87%8C%E7%9D%BD%E9%81%95%E4%BA%94%E5%B9%B4%E9%87%8D%E8%BF%94%E5%A4%A7%E9%8A%80%E5%B9%95%EF%BC%81%E5%A5%87%E5%B9%BB%E5%8B%95%E7%95%AB%E3%80%8A%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0%E6%9C%B5%E8%8E%89%E4%B9%8B%E5%AE%B6%E3%80%8B10%E6%9C%8830%E6%97%A5%E4%B8%8A%E6%98%A0",
+        "thumb": "https://s3-ap-northeast-1.amazonaws.com/tw.com.carture/images/1200/179070309708.jpg"
+      },
+      {
+        "title": "人骨教堂求婚鬧上新聞！　姚愛寗自爆「土豪式戀愛」送鋼琴也願意",
+        "source": "緯來新聞",
+        "url": "https://news.videoland.com.tw/article/c3e0adca-3184-4c67-944b-842d6ae32fa7.html",
+        "thumb": "https://news.videoland.com.tw/newsphoto/enews_20269165702_1F860D.webp"
+      },
+      {
+        "title": "台灣美景驚艷歐洲影迷！姚愛寗《朵莉之家》玩真人轉描化身洋娃娃　自爆土豪式戀愛",
+        "source": "TVBS",
+        "url": "https://news.tvbs.com.tw/entertainment/movies/4023363",
+        "thumb": "https://news-images.tvbs.com.tw/api/v1/image/01a0aca8-66a9-7225-a1a4-b1ef34c42f97.jpg?w=1067&h=600&t=16x9&c=0,41,800,491&w=800&h=450"
+      },
+      {
+        "title": "闖人骨教堂求婚！姚愛寗自招戀愛腦很「土豪」　曾送男友傳家寶鋼琴",
+        "source": "鏡報",
+        "url": "https://www.mirrordaily.news/story/86180",
+        "thumb": "https://statics-prod.mirrordaily.news/images/9e9fa60c-4c95-40a0-9598-d46b11d56427-w2400.webP"
       }
     ],
     "published": true,
