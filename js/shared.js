@@ -218,3 +218,69 @@ function preventOrphans(selector, n = 4) {
   });
 }
 document.addEventListener('DOMContentLoaded', () => preventOrphans('.page-hero-zh, .about-bio p'));
+
+/* ── Schedule ── */
+const SCHEDULE_CAT = {
+  event:      '活動',
+  screening:  '上映 / 播出',
+  talk:       '講座',
+  signing:    '簽書會',
+  meet:       '見面會',
+  exhibition: '展覽',
+  show:       '節目 / 直播',
+  other:      '其他',
+};
+const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+function localDateStr(d = new Date()) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function scheduleEnd(s) { return s.end_date || s.date; }
+
+/** 'past' | 'today' | 'ongoing' | 'upcoming' */
+function scheduleStatus(s, today = localDateStr()) {
+  if (scheduleEnd(s) < today) return 'past';
+  if (s.date === today && scheduleEnd(s) === today) return 'today';
+  if (s.date <= today) return 'ongoing';
+  return 'upcoming';
+}
+
+function scheduleEsc(str) {
+  return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function scheduleRow(s) {
+  const [y, m, d] = s.date.split('-').map(Number);
+  const weekday = WEEKDAYS[new Date(y, m - 1, d).getDay()];
+  const status = scheduleStatus(s);
+  const badge = { today: '今天', ongoing: '進行中' }[status];
+  const cat = s.category in SCHEDULE_CAT ? s.category : 'other';
+  let range = '';
+  if (s.end_date) {
+    const [, em, ed] = s.end_date.split('-').map(Number);
+    range = `～ ${em !== m ? em + '/' : ''}${ed}`;
+  }
+  const meta = [s.time, s.venue].filter(Boolean).map(scheduleEsc).join('<span class="sc-dot">·</span>');
+  const title = s.url
+    ? `<a href="${scheduleEsc(s.url)}" target="_blank" rel="noopener">${scheduleEsc(s.title)}<span class="sc-ext" aria-hidden="true">↗</span></a>`
+    : scheduleEsc(s.title);
+  return `
+    <article class="sc-item sc-${status}" data-date="${s.date}">
+      <div class="sc-date">
+        <span class="sc-month">${y !== new Date().getFullYear() ? y + '.' : ''}${m}月</span>
+        <span class="sc-day">${d}</span>
+        <span class="sc-week">${range || '週' + weekday}</span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tags">
+          <span class="sc-cat sc-cat-${cat}">${SCHEDULE_CAT[cat]}</span>
+          ${badge ? `<span class="sc-badge">${badge}</span>` : ''}
+          ${status === 'past' ? '<span class="sc-ended">已結束</span>' : ''}
+        </div>
+        <h3 class="sc-title">${title}</h3>
+        ${meta ? `<div class="sc-meta">${meta}</div>` : ''}
+        ${s.note ? `<div class="sc-note">${scheduleEsc(s.note)}</div>` : ''}
+      </div>
+    </article>`;
+}

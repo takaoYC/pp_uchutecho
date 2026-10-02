@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadWorksPreview();
   loadMVPreview();
   loadInterviewsPreview();
+  loadSchedulePreview();
   loadBooksPreview();
 });
 
@@ -72,4 +73,23 @@ async function loadBooksPreview() {
     return;
   }
   grid.innerHTML = preview.map(b => bookCard(b)).join('');
+}
+
+/** The 5 nearest items: upcoming first; if fewer than 5, fill with the most recent past ones */
+async function loadSchedulePreview() {
+  const el = document.getElementById('scheduleList');
+  try {
+    const res = await fetch('./data/schedule.json?t=' + Date.now());
+    const items = (await res.json()).filter(s => s.date);
+    const today = localDateStr();
+    const upcoming = items.filter(s => scheduleEnd(s) >= today).sort((a, b) => a.date.localeCompare(b.date));
+    const past = items.filter(s => scheduleEnd(s) < today).sort((a, b) => b.date.localeCompare(a.date));
+    const picked = [...upcoming.slice(0, 5), ...past.slice(0, Math.max(0, 5 - upcoming.length))]
+      .sort((a, b) => b.date.localeCompare(a.date));
+    el.innerHTML = picked.length
+      ? picked.map(scheduleRow).join('')
+      : '<div class="empty-state"><div class="emoji">🗓️</div>尚無行程</div>';
+  } catch {
+    el.innerHTML = '<div class="empty-state"><div class="emoji">🗓️</div>尚無行程</div>';
+  }
 }

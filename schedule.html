@@ -6,15 +6,15 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <title>書單 — ピピ宇宙手帖</title>
-  <meta name="description" content="姚愛寗（PP）推薦過的書籍，以及她在訪談、Podcast、活動中提到過的作品，包含推薦序與推薦語。">
-  <link rel="canonical" href="https://takaoyc.github.io/pp_uchutecho/books.html">
-  <meta property="og:url" content="https://takaoyc.github.io/pp_uchutecho/books.html">
+  <title>行程 — ピピ宇宙手帖</title>
+  <meta name="description" content="姚愛寗（PP）的行程整理：上映、活動、講座、簽書會、展覽與節目，包含即將到來與過去的行程。">
+  <link rel="canonical" href="https://takaoyc.github.io/pp_uchutecho/schedule.html">
+  <meta property="og:url" content="https://takaoyc.github.io/pp_uchutecho/schedule.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ピピ宇宙手帖">
   <meta property="og:locale" content="zh_TW">
-  <meta property="og:title" content="書單 — ピピ宇宙手帖">
-  <meta property="og:description" content="姚愛寗（PP）推薦過的書籍，以及她在訪談、Podcast、活動中提到過的作品，包含推薦序與推薦語。">
+  <meta property="og:title" content="行程 — ピピ宇宙手帖">
+  <meta property="og:description" content="姚愛寗（PP）的行程整理：上映、活動、講座、簽書會、展覽與節目，包含即將到來與過去的行程。">
   <meta property="og:image" content="https://takaoyc.github.io/pp_uchutecho/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -35,9 +35,9 @@
     <a href="works.html">作品集</a>
     <a href="mv.html">MV</a>
     <a href="interviews.html">訪談/節目</a>
-    <a href="schedule.html">行程</a>
+    <a href="schedule.html" style="color:var(--accent)">行程</a>
     <a href="media.html">媒體</a>
-    <a href="books.html" style="color:var(--accent)">書單</a>
+    <a href="books.html">書單</a>
     <a href="events.html">紀錄</a>
   </nav>
   <div class="header-right">
@@ -51,28 +51,28 @@
 
 <div class="page-hero">
   <div class="page-hero-inner">
-    <h1 class="page-hero-title">書單</h1>
+    <h1 class="page-hero-title">行程</h1>
     <div class="page-hero-desc">
-      <p class="page-hero-zh">閱讀一本書，就像短暫旅行到另一個人的宇宙。<br><br>這裡整理了PP推薦過的書籍，以及她在訪談、Podcast、活動中提到過的作品。<br><br>或許有一天，當我們翻開同一本書時，也能看見相似的風景。</p>
+      <p class="page-hero-zh">星星會在什麼時候亮起，總讓人想先記下來。<br><br>這裡整理了PP的上映、活動、講座、展覽與節目行程，也保留那些已經走過的日子。<br><br>無論是即將到來的相遇，還是曾經閃爍過的夜晚，都能在這本手帖裡找到它們的座標。</p>
     </div>
   </div>
 </div>
 
-<section class="section" aria-labelledby="books-heading">
+<section class="section" aria-labelledby="schedule-heading">
+  <div class="cal" id="calendar" aria-label="行事曆">
+    <div class="empty-state"><div class="emoji">🗓️</div>載入中…</div>
+  </div>
+
   <div class="section-header">
-    <h2 class="section-title" id="books-heading">全部書目 <span class="count-tag" id="booksCount"></span></h2>
-    <div class="controls">
-      <input class="search-input" id="booksSearch" aria-label="搜尋書單" type="search" placeholder="搜尋書名、作者…" autocomplete="off">
-    </div>
+    <h2 class="section-title" id="schedule-heading">總行程 <span class="count-tag" id="scheduleCount"></span></h2>
   </div>
-  <div class="books-grid" id="booksGrid">
-    <div class="empty-state" style="grid-column:1/-1"><div class="emoji">📚</div>載入中…</div>
+  <div class="sc-filters" role="tablist" aria-label="篩選行程">
+    <button class="filter-btn" data-filter="upcoming" role="tab">即將到來</button>
+    <button class="filter-btn" data-filter="past" role="tab">已結束</button>
+    <button class="filter-btn" data-filter="all" role="tab">全部</button>
   </div>
+  <div id="scheduleList"></div>
 </section>
-
-<div class="books-note">
-  <p>標示「推薦序」者，指書中或商品頁明確收錄姚愛寗撰寫之序文、專序或具篇名之推薦文；標示「推薦語」者，則多為短句推薦、名人推薦名單或推薦段落，未必為單獨成篇文章。</p>
-</div>
 
 </main>
 
@@ -93,7 +93,7 @@
       <svg viewBox="0 0 24 24" style="width:17px;height:17px;fill:currentColor;display:block"><path d="M12 1a11 11 0 1 0 0 22A11 11 0 0 0 12 1zm0 2a9 9 0 1 1 0 18A9 9 0 0 1 12 3zm0 2a7 7 0 1 0 0 14A7 7 0 0 0 12 5zm0 2a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-.5 3.5h1l1 5.5h-3l1-5.5z"/></svg>
     </a>
   </div>
-  <p style="margin-top:6px;font-size:0.76rem;">内容僅供個人紀錄用，版權屬原著作人所有</p>
+  <p style="margin-top:6px;font-size:0.76rem;">内容僅供個人紀錄用，版權屬原著作人所有。</p>
   <p class="live-count" id="liveCount" hidden></p>
   <p style="margin-top:8px;font-size:0.72rem;color:var(--text-muted)" id="lastUpdated"></p>
   <p style="margin-top:10px;font-size:0.76rem;"><a href="contribute.html" style="color:var(--accent);text-decoration:none;">✦ 星光補充表單</a></p>
@@ -101,7 +101,7 @@
 
 <button class="back-top" id="backTop" aria-label="回到頂端">↑</button>
 
-<script src="js/books.js"></script>
+<script src="js/schedule.js"></script>
 <script data-goatcounter="https://pp-uchutecho.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
