@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   let viewY = now.getFullYear();
   let viewM = now.getMonth(); // 0-based
   let selected = null;
+  let picking = false;   // month/year picker open
+  let pickY = viewY;     // year shown in the picker
+
+  // 'YYYY-MM' → number of items touching that month
+  const byMonth = {};
 
   // date string → items on that day (multi-day items appear on every day they span)
   const byDay = {};
@@ -35,6 +40,34 @@ document.addEventListener('DOMContentLoaded', async () => {
       cur.setDate(cur.getDate() + 1);
     }
   });
+  Object.entries(byDay).forEach(([day, list]) => {
+    const key = day.slice(0, 7);
+    byMonth[key] = byMonth[key] || new Set();
+    list.forEach(s => byMonth[key].add(s));
+  });
+
+  function renderPicker() {
+    const thisMonth = localDateStr().slice(0, 7);
+    const months = Array.from({ length: 12 }, (_, i) => {
+      const key = `${pickY}-${String(i + 1).padStart(2, '0')}`;
+      const n = byMonth[key]?.size || 0;
+      const cls = ['cal-month',
+        pickY === viewY && i === viewM && 'cur',
+        key === thisMonth && 'now',
+        n && 'has'].filter(Boolean).join(' ');
+      return `<button type="button" class="${cls}" data-month="${i}" aria-label="${pickY} 年 ${i + 1} 月${n ? `，${n} 個行程` : ''}">
+        ${i + 1} 月${n ? `<span class="cal-month-n">${n}</span>` : ''}</button>`;
+    }).join('');
+    return `
+      <div class="cal-picker">
+        <div class="cal-picker-year">
+          <button type="button" class="cal-btn" data-year="-1" aria-label="前一年">‹</button>
+          <span>${pickY} 年</span>
+          <button type="button" class="cal-btn" data-year="1" aria-label="下一年">›</button>
+        </div>
+        <div class="cal-months">${months}</div>
+      </div>`;
+  }
 
   function renderCalendar() {
     const first = new Date(viewY, viewM, 1);
@@ -73,22 +106,40 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     calEl.innerHTML = `
       <div class="cal-head">
-        <div class="cal-title"><small>${viewY}</small>${viewM + 1} 月</div>
+        <button type="button" class="cal-title" data-pick aria-expanded="${picking}" aria-label="選擇年份與月份">
+          <small>${viewY}</small>${viewM + 1} 月<span class="cal-caret" aria-hidden="true">▾</span>
+        </button>
         <div class="cal-nav">
           <button type="button" class="cal-btn" data-nav="-1" aria-label="上個月">‹</button>
           <button type="button" class="cal-btn" data-nav="0">今天</button>
           <button type="button" class="cal-btn" data-nav="1" aria-label="下個月">›</button>
         </div>
       </div>
+      ${picking ? renderPicker() : `
       <div class="cal-grid">
         ${WEEKDAYS.map(w => `<div class="cal-wd">${w}</div>`).join('')}
         ${cells}
       </div>
       ${legend}
-      ${panel}`;
+      ${panel}`}`;
   }
 
   calEl.addEventListener('click', e => {
+    if (e.target.closest('[data-pick]')) {
+      picking = !picking;
+      pickY = viewY;
+      renderCalendar();
+      return;
+    }
+    const yr = e.target.closest('[data-year]');
+    if (yr) { pickY += Number(yr.dataset.year); renderCalendar(); return; }
+    const mon = e.target.closest('[data-month]');
+    if (mon) {
+      viewY = pickY; viewM = Number(mon.dataset.month);
+      picking = false; selected = null;
+      renderCalendar();
+      return;
+    }
     const nav = e.target.closest('[data-nav]');
     if (nav) {
       const n = Number(nav.dataset.nav);
@@ -98,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (viewM < 0) { viewM = 11; viewY--; }
         if (viewM > 11) { viewM = 0; viewY++; }
       }
-      selected = null;
+      selected = null; picking = false;
       renderCalendar();
       return;
     }
