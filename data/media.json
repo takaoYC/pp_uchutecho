@@ -10,8 +10,8 @@
         "url": "https://www.youtube.com/watch?v=Ksch42crojw&t=3395s"
       },
       {
-        "title": " 昆凌睽違五年登國片 姚愛寗分享伴娃「鬼故事」",
         "source": "看新聞",
+        "title": " 昆凌睽違五年登國片 姚愛寗分享伴娃「鬼故事」",
         "url": "https://www.youtube.com/watch?v=uU8R9S2WkPU"
       }
     ],
@@ -125,28 +125,34 @@
         "url": "https://ent.ebc.net.tw/movie/502783"
       },
       {
-        "title": "【車勢星聞】昆凌睽違五年重返大銀幕！奇幻動畫《歡迎來到朵莉之家》10月30日上映",
         "source": "車勢文化",
-        "url": "https://www.carture.com.tw/others/article/42417-%E3%80%90%E8%BB%8A%E5%8B%A2%E6%98%9F%E8%81%9E%E3%80%91%E6%98%86%E5%87%8C%E7%9D%BD%E9%81%95%E4%BA%94%E5%B9%B4%E9%87%8D%E8%BF%94%E5%A4%A7%E9%8A%80%E5%B9%95%EF%BC%81%E5%A5%87%E5%B9%BB%E5%8B%95%E7%95%AB%E3%80%8A%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0%E6%9C%B5%E8%8E%89%E4%B9%8B%E5%AE%B6%E3%80%8B10%E6%9C%8830%E6%97%A5%E4%B8%8A%E6%98%A0",
-        "thumb": "https://s3-ap-northeast-1.amazonaws.com/tw.com.carture/images/1200/179070309708.jpg"
+        "thumb": "https://s3-ap-northeast-1.amazonaws.com/tw.com.carture/images/1200/179070309708.jpg",
+        "title": "【車勢星聞】昆凌睽違五年重返大銀幕！奇幻動畫《歡迎來到朵莉之家》10月30日上映",
+        "url": "https://www.carture.com.tw/others/article/42417-%E3%80%90%E8%BB%8A%E5%8B%A2%E6%98%9F%E8%81%9E%E3%80%91%E6%98%86%E5%87%8C%E7%9D%BD%E9%81%95%E4%BA%94%E5%B9%B4%E9%87%8D%E8%BF%94%E5%A4%A7%E9%8A%80%E5%B9%95%EF%BC%81%E5%A5%87%E5%B9%BB%E5%8B%95%E7%95%AB%E3%80%8A%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0%E6%9C%B5%E8%8E%89%E4%B9%8B%E5%AE%B6%E3%80%8B10%E6%9C%8830%E6%97%A5%E4%B8%8A%E6%98%A0"
       },
       {
-        "title": "人骨教堂求婚鬧上新聞！　姚愛寗自爆「土豪式戀愛」送鋼琴也願意",
         "source": "緯來新聞",
-        "url": "https://news.videoland.com.tw/article/c3e0adca-3184-4c67-944b-842d6ae32fa7.html",
-        "thumb": "https://news.videoland.com.tw/newsphoto/enews_20269165702_1F860D.webp"
+        "thumb": "https://news.videoland.com.tw/newsphoto/enews_20269165702_1F860D.webp",
+        "title": "人骨教堂求婚鬧上新聞！　姚愛寗自爆「土豪式戀愛」送鋼琴也願意",
+        "url": "https://news.videoland.com.tw/article/c3e0adca-3184-4c67-944b-842d6ae32fa7.html"
       },
       {
-        "title": "台灣美景驚艷歐洲影迷！姚愛寗《朵莉之家》玩真人轉描化身洋娃娃　自爆土豪式戀愛",
         "source": "TVBS",
-        "url": "https://news.tvbs.com.tw/entertainment/movies/4023363",
-        "thumb": "https://news-images.tvbs.com.tw/api/v1/image/01a0aca8-66a9-7225-a1a4-b1ef34c42f97.jpg?w=1067&h=600&t=16x9&c=0,41,800,491&w=800&h=450"
+        "thumb": "https://news-images.tvbs.com.tw/api/v1/image/01a0aca8-66a9-7225-a1a4-b1ef34c42f97.jpg?w=1067&h=600&t=16x9&c=0,41,800,491&w=800&h=450",
+        "title": "台灣美景驚艷歐洲影迷！姚愛寗《朵莉之家》玩真人轉描化身洋娃娃　自爆土豪式戀愛",
+        "url": "https://news.tvbs.com.tw/entertainment/movies/4023363"
       },
       {
-        "title": "闖人骨教堂求婚！姚愛寗自招戀愛腦很「土豪」　曾送男友傳家寶鋼琴",
         "source": "鏡報",
-        "url": "https://www.mirrordaily.news/story/86180",
-        "thumb": "https://statics-prod.mirrordaily.news/images/9e9fa60c-4c95-40a0-9598-d46b11d56427-w2400.webP"
+        "thumb": "https://statics-prod.mirrordaily.news/images/9e9fa60c-4c95-40a0-9598-d46b11d56427-w2400.webP",
+        "title": "闖人骨教堂求婚！姚愛寗自招戀愛腦很「土豪」　曾送男友傳家寶鋼琴",
+        "url": "https://www.mirrordaily.news/story/86180"
+      },
+      {
+        "title": "娛樂透視／《歡迎來到朵莉之家》台式魔幻吸睛　真人轉描2D手繪動畫躍國際",
+        "source": "鏡週刊",
+        "url": "https://www.mirrormedia.mg/story/amp/20260924insight001",
+        "thumb": "https://v3-statics.mirrormedia.mg/images/89cb2406-b3f7-4a4a-bd80-7ec7c55b0223-w1600.jpg"
       }
     ],
     "published": true,

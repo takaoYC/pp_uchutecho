@@ -97,5 +97,93 @@
     "url": "",
     "note": "",
     "id": "64ad35d9"
+  },
+  {
+    "title": "餘像14.344 攝影展導覽",
+    "date": "2025-12-13",
+    "end_date": "",
+    "time": "16:00",
+    "category": "event",
+    "venue": "以覺學",
+    "url": "",
+    "note": "",
+    "id": "ad95dc82"
+  },
+  {
+    "title": "餘像14.344 攝影展",
+    "date": "2025-12-06",
+    "end_date": "2025-12-19",
+    "time": "",
+    "category": "exhibition",
+    "venue": "以覺學",
+    "url": "",
+    "note": "",
+    "id": "7ea9c2ef"
+  },
+  {
+    "title": "餘像14.344 攝影展導覽",
+    "date": "2025-12-06",
+    "end_date": "",
+    "time": "15:00 / 17:00",
+    "category": "event",
+    "venue": "以覺學",
+    "url": "",
+    "note": "",
+    "id": "ec1ccafe"
+  },
+  {
+    "title": "餘像14.344 攝影展講座",
+    "date": "2025-12-07",
+    "end_date": "",
+    "time": "16:30",
+    "category": "talk",
+    "venue": "以覺學",
+    "url": "",
+    "note": "",
+    "id": "408af331"
+  },
+  {
+    "title": "餘像14.344 攝影展講座",
+    "date": "2025-12-14",
+    "end_date": "",
+    "time": "14:00",
+    "category": "talk",
+    "venue": "以覺學",
+    "url": "",
+    "note": "",
+    "id": "1920a2e8"
+  },
+  {
+    "title": "《以你的名字呼喚我》戀夏影展映前導讀座談",
+    "date": "2025-07-20",
+    "end_date": "",
+    "time": "17:00",
+    "category": "talk",
+    "venue": "NOKE 忠泰樂生活 3F 大階梯",
+    "url": "",
+    "note": "",
+    "id": "eff55302"
+  },
+  {
+    "title": "《那些無法測量的事物》講座",
+    "date": "2025-04-05",
+    "end_date": "",
+    "time": "14:00",
+    "category": "talk",
+    "venue": "朋丁 3F",
+    "url": "",
+    "note": "",
+    "id": "2e76124e"
+  },
+  {
+    "title": "《那些無法測量的事物》講座",
+    "date": "2025-04-05",
+    "end_date": "",
+    "time": "14:00",
+    "category": "talk",
+    "venue": "朋丁 3F",
+    "url": "",
+    "note": "",
+    "id": "60f0afb5"
   }
 ]
