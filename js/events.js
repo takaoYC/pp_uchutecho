@@ -34,6 +34,8 @@ function stripHtml(html) {
 function previewText(content) {
   for (const block of (content || [])) {
     if (block.type === 'text') {
+      const note = (block.value || '').match(/^\s*<blockquote class="ev-note">([\s\S]*?)<\/blockquote>/);
+      if (note) return stripHtml(note[1]);
       const plain = stripHtml(block.value);
       if (plain.length > 0) {
         return plain.length > 120 ? plain.slice(0, 120) + '…' : plain;

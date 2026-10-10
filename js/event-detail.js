@@ -48,6 +48,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         ${linksHtml}
       </article>
     `;
+    if (container.querySelector('.instagram-media')) {
+      const sc = document.createElement('script');
+      sc.async = true;
+      sc.src = 'https://www.instagram.com/embed.js';
+      document.body.appendChild(sc);
+    }
+    initStickyTitle();
   } catch (e) {
     showError(container, '載入失敗，請稍後再試。');
   }
@@ -122,4 +129,31 @@ function escHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+// Footnote links: scroll so the target sits just below the sticky header + article title
+document.addEventListener('click', e => {
+  const a = e.target.closest('.event-body a[href^="#fn"]');
+  if (!a) return;
+  const target = document.getElementById(a.getAttribute('href').slice(1));
+  if (!target) return;
+  e.preventDefault();
+  const sticky = document.querySelector('.event-detail-header .event-title');
+  // height of the header once it is stuck (its CSS top + its own height), not its current position
+  // the title compacts to one line once stuck, so use that height (~60px) rather than its full height
+  const offset = (sticky ? (parseFloat(getComputedStyle(sticky).top) || 60) + 60 : 80) + 20;
+  history.replaceState(null, '', a.getAttribute('href'));
+  window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+});
+
+// 2. Once the article title sticks to the top, shrink it to one line so it doesn't cover the text
+function initStickyTitle() {
+  const title = document.querySelector('.event-detail-header .event-title');
+  if (!title) return;
+  const sentinel = document.createElement('div');
+  title.before(sentinel);
+  const top = parseFloat(getComputedStyle(title).top) || 60;
+  const update = () => title.classList.toggle('is-stuck', sentinel.getBoundingClientRect().top < top);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 }

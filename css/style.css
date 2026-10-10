@@ -1339,3 +1339,49 @@ button.cal-title[aria-expanded="true"] .cal-caret { transform: rotate(180deg); }
   .cal-months { grid-template-columns: repeat(3, 1fr); }
   .cal-month { height: 52px; font-size: 0.88rem; }
 }
+
+/* ── Article: notes & footnotes ── */
+.event-body blockquote.ev-note {
+  margin: 0 0 1.6em; padding: 12px 16px;
+  border-left: 3px solid var(--accent-soft); border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  font-size: 0.85em; color: var(--text-muted);
+}
+.event-body blockquote.ev-note p { margin: 0 !important; }
+.event-body a { color: var(--accent); word-break: break-all; }
+.event-body sup.fn-ref { font-size: 0.7em; line-height: 0 !important; vertical-align: super; margin-left: 1px; }
+.event-body sup.fn-ref a { text-decoration: none; font-weight: 700; font-family: 'Noto Sans TC', sans-serif; }
+.event-body [id^="fn"] { scroll-margin-top: 110px; }
+.event-body hr { border: none; border-top: 1px solid var(--border); margin: 2.4em 0 0.4em; }
+.event-body ol.footnotes { list-style: none; padding: 0; margin: 0; font-size: 0.88em; color: var(--text-muted); }
+.event-body ol.footnotes > li { padding: 14px 0; border-bottom: 1px dashed var(--border); }
+.event-body ol.footnotes > li:last-child { border-bottom: none; }
+.event-body ol.footnotes p { margin: 0 0 0.6em !important; }
+.event-body .fn-title { color: var(--text); }
+.event-body .fn-back { text-decoration: none; margin-left: 4px; }
+.event-body ol.footnotes ul { margin: 0.4em 0 0.6em; padding-left: 1.2em; }
+.event-body ol.footnotes ul li { margin-bottom: 0.4em; }
+.event-body li:target { background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 8px; transition: background 0.4s; }
+
+/* Sticky article title: compact single line once stuck */
+.event-detail-header .event-title { transition: font-size 0.2s ease, padding 0.2s ease; }
+.event-detail-header .event-title.is-stuck {
+  font-size: 1rem; padding: 10px 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  background: rgba(247, 245, 255, 0.94);
+}
+[data-theme="dark"] .event-detail-header .event-title.is-stuck { background: rgba(22, 17, 42, 0.94); }
+
+/* Instagram post inside an article */
+.event-body blockquote.instagram-media { margin: 0 auto 1.6em !important; max-width: 540px; }
+.event-body iframe.instagram-media { margin: 0 auto 1.6em !important; display: block; }
+
+/* The article header is a <header> element: undo the site-header styles it inherits
+   (sticky / fixed 60px height / background), and let the title stick within the whole article */
+header.event-detail-header {
+  display: contents;
+  position: static; height: auto; padding: 0; background: none;
+  backdrop-filter: none; -webkit-backdrop-filter: none; z-index: auto; border: none;
+}
+.event-detail-header .event-meta { margin-bottom: 12px; }
+.event-detail-header .event-title { margin-bottom: 28px; }
