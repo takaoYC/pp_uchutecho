@@ -185,5 +185,27 @@
     "url": "",
     "note": "",
     "id": "60f0afb5"
+  },
+  {
+    "title": "《晚窒息》特映會場次A",
+    "date": "2026-11-01",
+    "end_date": "",
+    "time": "12:00",
+    "category": "screening",
+    "venue": "CLASSROOM",
+    "url": "",
+    "note": "",
+    "id": "c1c4b7ca"
+  },
+  {
+    "title": "《晚窒息》特映會場次B",
+    "date": "2026-11-01",
+    "end_date": "",
+    "time": "15:00",
+    "category": "screening",
+    "venue": "CLASSROOM",
+    "url": "",
+    "note": "",
+    "id": "0692e59e"
   }
 ]
